@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Helvetica', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+h1 {
+  font-size: 64px;
+}
+h2 {
+  font-size: 52px;
+}
+h3 {
+  font-size: 48px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigation{
+  margin: 0 0 100px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex-grow-2{
+  flex-grow: 2;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+div.Home{
+  background: url("./images/jukan-tateisi-bJhT_8nbUA0-unsplash.jpg");
+  background-size: cover;
+  height: calc(100vh - 100px);
+}
+.shell{
+  background-color: rgba(0,0,0,0.5);
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
+  width: 80%;
+}
+span.cl{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+span.green{
+  color: lawngreen;
+}
+span.blue{
+  color: mediumslateblue;
+}
+a.typewrite{
+  color: white;
+  text-decoration: none;
+}
+a.typewrite:hover{
+  cursor: default;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutme-header{
+  height: 25vh;
+}
+img.me{
+  background-color: cornsilk;
+}
+div.me{
+  background-color: #e4ded7;
+}
+div.img-container{
+  background-image: url("./images/IMG_63873.png");
+  background-repeat: no-repeat;
+  height: 1062px;
+}
+div.img-container2{
+  background-image: url("./images/me.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  height: 1062px;
+}
+div.about{
+  width: 40%;
+}
+div.about > p {
+  font-size: 1.5em;
+  text-align: justify;
+}
+.skills{
+  height: 4em;
+  flex-grow: 1;
 }
