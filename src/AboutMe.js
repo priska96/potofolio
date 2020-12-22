@@ -24,7 +24,7 @@ function AboutMe() {
             <Jumbotron className="d-flex flex-column justify-content-center align-items-end img-container2">
                 <div className="about">
                     <p>
-                        I'm a Berlin based full-stack Web Developer, building easy to use and user-centric webpages.
+                        <span>I'm a Berlin based full-stack Web Developer, building easy to use and user-centric webpages.</span><br/>
                         I currently work as a Django developer for TwoTickets.de in Berlin, Germany, which is where my
                         passion for design and development has its roots. During my studies in 2017 I joined the IT
                         team and finished various projects. Wandering between logical back-end problems and creativity
@@ -60,8 +60,10 @@ function AboutMe() {
             {/*        </p>*/}
             {/*    </div>*/}
             {/*</Jumbotron>*/}
-            <Container>
+            <Container className="d-flex justify-content-center align-items-center aboutme-header">
                 <h2>Skills</h2>
+            </Container>
+            <Container>
                 <Row className="p-3">
                     <Image src={html} className="skills"/>
                     <Image src={css} className="skills"/>

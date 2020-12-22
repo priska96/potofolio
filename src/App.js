@@ -22,10 +22,10 @@ function App() {
                             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="mr-auto flex-grow-1">
-                                    <Nav.Link href="/" className="flex-grow-1">Home</Nav.Link>
-                                    <Nav.Link href="#about" className="flex-grow-1">About Me</Nav.Link>
-                                    <Nav.Link href="#projects" className="flex-grow-1">Projects</Nav.Link>
-                                    <Nav.Link href="#contact" className="flex-grow-1">Contact</Nav.Link>
+                                    <Nav.Link href="/" className="flex-grow-1 text-center">Home</Nav.Link>
+                                    <Nav.Link href="#about" className="flex-grow-1 text-center">About Me</Nav.Link>
+                                    <Nav.Link href="#projects" className="flex-grow-1 text-center">Projects</Nav.Link>
+                                    <Nav.Link href="#contact" className="flex-grow-1 text-center">Contact</Nav.Link>
                                 </Nav>
                             </Navbar.Collapse>
                         </Navbar>
