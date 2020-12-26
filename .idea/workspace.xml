@@ -71,7 +71,7 @@
       <workItem from="1608565793642" duration="3037000" />
       <workItem from="1608599616917" duration="10112000" />
       <workItem from="1608897609194" duration="20750000" />
-      <workItem from="1608937954738" duration="8389000" />
+      <workItem from="1608937954738" duration="8693000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1608551568345</created>
@@ -95,7 +95,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first draft" />
-    <option name="LAST_COMMIT_MESSAGE" value="first draft" />
+    <MESSAGE value="about me responsive, projects desktop done, contact desktop done" />
+    <option name="LAST_COMMIT_MESSAGE" value="about me responsive, projects desktop done, contact desktop done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
