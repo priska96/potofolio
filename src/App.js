@@ -1,4 +1,4 @@
-import logo from './images/logo.svg';
+import logo from './images/logo.png';
 import './App.css';
 import React from 'react'
 import {Button, Nav, Navbar, Jumbotron} from 'react-bootstrap';
@@ -15,14 +15,20 @@ function App() {
             <div className="App">
 
                 <div className="navigation">
-                    {/*<img src={logo} className="logo-image" alt="Logo Image"/>*/}
+
                     <div className="navigation-sub">
                         <Navbar bg="light" expand="md" fixed="top" className="bg-light justify-content-end">
-                            <Navbar.Brand href="/" className="flex-grow-2 text-right">React-Bootstrap</Navbar.Brand>
+                            <Navbar.Brand href="/" className="flex-grow-2 text-right">
+                                <img
+                                src={logo}
+                                className="d-inline-block align-top logo"
+                                alt="React Bootstrap logo"
+                              />
+                            </Navbar.Brand>
                             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="mr-auto flex-grow-1">
-                                    <Nav.Link href="/" className="flex-grow-1 text-center">Home</Nav.Link>
+                                    <Nav.Link href="#home" className="flex-grow-1 text-center">Home</Nav.Link>
                                     <Nav.Link href="#about" className="flex-grow-1 text-center">About Me</Nav.Link>
                                     <Nav.Link href="#projects" className="flex-grow-1 text-center">Projects</Nav.Link>
                                     <Nav.Link href="#contact" className="flex-grow-1 text-center">Contact</Nav.Link>

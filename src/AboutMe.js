@@ -11,6 +11,8 @@ import wordpress from './images/wordpress-icon.svg';
 import me from './images/B1F8E852-FC49-4C36-9C10-3E0C75671B29.JPEG';
 
 import me2 from './images/IMG_63873.png';
+
+import me3 from './images/me.png';
 import './App.css';
 import React from 'react'
 import {Button, Col, Container, Image, Jumbotron, Row} from 'react-bootstrap';
@@ -18,11 +20,13 @@ import {Button, Col, Container, Image, Jumbotron, Row} from 'react-bootstrap';
 function AboutMe() {
     return (
         <div className="AboutMe">
+            <a name="about"/>
             <Container className="d-flex justify-content-center align-items-center aboutme-header">
                 <h1>About Me</h1>
             </Container>
-            <Jumbotron className="d-flex flex-column justify-content-center align-items-end img-container2">
-                <div className="about">
+            <Jumbotron className="d-flex flex-xl-row flex-column justify-content-xl-start align-items-xl-center justify-content-center align-items-start img-container2 bg-beige">
+                <div className="me-image"><Image src ={me3}/></div>
+                <div className="about flex-grow-1">
                     <p>
                         <span>I'm a Berlin based full-stack Web Developer, building easy to use and user-centric webpages.</span><br/>
                         I currently work as a Django developer for TwoTickets.de in Berlin, Germany, which is where my
@@ -30,7 +34,7 @@ function AboutMe() {
                         team and finished various projects. Wandering between logical back-end problems and creativity
                         needing front-end issues brings me joy and keeps me at ease. I love visuals and animations,
                         what perhaps comes from my hobbies being drawing and painting, as well as the hours spent
-                        playing video games and creating RPGs.<br/>
+                        playing video games and creating RPGs in my younger years.<br/>
                         Taking first steps in freelance works paved me the way to experience Shopify and WordPress, which
                         are fun to use, if you want something neat and quick. But building everything from scratch and
                         choosing your programming environment is even better!<br/>

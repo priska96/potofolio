@@ -1,45 +1,55 @@
-import nutritionplanner from './images/nutritionplanner.png';
-import jabe from './images/jabe.png';
-import poilei from './images/poilei.png';
-import glowingkids from './images/glowingkids.png';
-import pscore from './images/pscore.png';
-import pscoreedu from './images/pscoreedu.png';
-import munscr from './images/munscr.png';
+import nutritionplanner from './images/nutritionplanner_small.png';
+import jabe from './images/jabe_small.png';
+import poilei from './images/poilei_small.png';
+import glowingkids from './images/glowingkids_small.png';
+import pscore from './images/pscore_small.png';
+import pscoreedu from './images/pscoreedu_small.png';
+import munscr from './images/munscr_small.png';
+import twotickets from './images/twotickets_small.png';
 import './App.css';
 import React from 'react'
 import PropTypes from "prop-types";
-import {Button, ButtonGroup, Card, CardGroup, Container} from 'react-bootstrap';
+import {Button, ButtonGroup, Card, CardGroup, Container, Jumbotron} from 'react-bootstrap';
 
 class Project extends React.Component {
     constructor(props) {
         super(props);
         this.cardsGroup = props.cardsGroup;
         this.cards = props.cards;
+        this.viewDetail = this.viewDetail.bind(this);
     }
+    viewDetail(){
 
+    }
     render() {
         return (
-            <div>
-                <h2>{this.cardsGroup}</h2>
-                <CardGroup className="justify-content-center">
+            <React.Fragment>
+                <Jumbotron className="project-group">
+                    <h2>{this.cardsGroup}</h2>
+                </Jumbotron>
+                <CardGroup className="flex-row justify-content-around align-items-start">
                     {this.cards.map((card, i) => (
-                        <Card key={i} style={{maxWidth: '18rem'}} className="item">
+                        <Card key={i} className="item project">
                             <Card.Img variant="top" src={card.img}/>
                             <div className="item-overlay bottom">
                                 <Card.Body>
                                     <Card.Title>{card.cardTitle}</Card.Title>
                                     <Card.Text>{card.cardText}</Card.Text>
-                                    <ButtonGroup vertical>
-                                        <Button variant="primary" href={card.buttonWebsite}>View Page</Button>
-                                        <Button variant="primary" href={card.buttonCode}>View
-                                            Code</Button>
+                                    <ButtonGroup vertical className={card.buttonCode ? "justify-content-between three-btns": "justify-content-between"}>
+                                        <Button className="flex-grow-0" variant="loading"
+                                                    href={card.buttonWebsite}>View Page</Button>
+                                        {card.buttonCode ?
+                                            <Button className="flex-grow-0" variant="loading"
+                                                    href={card.buttonCode}>View Code</Button> : null}
+                                            <Button className="flex-grow-0" variant="loading"
+                                                    onClick={this.viewDetail}>View Details</Button>
                                     </ButtonGroup>
                                 </Card.Body>
                             </div>
                         </Card>)
                     )}
                 </CardGroup>
-            </div>
+            </React.Fragment>
         )
     }
 }
@@ -79,14 +89,14 @@ const data = {
                     {
                         img: poilei,
                         cardTitle: "Poilei",
-                        cardText: "A Shopify online shop (maintaining).",
+                        cardText: "A Shopify online shop that sells Italian shoes (maintaining).",
                         buttonWebsite: 'https://poilei.com',
                         buttonCode: ''
                     },
                     {
                         img: glowingkids,
                         cardTitle: "GlowingKids",
-                        cardText: "A Shopify online shop (maintaining).",
+                        cardText: "A Shopify online shop that sells clothes for children (maintaining).",
                         buttonWebsite: 'https://glowingkids.de',
                         buttonCode: ''
                     }]
@@ -115,28 +125,15 @@ const data = {
                     }]
             }
             , {
-                cardsGroup: 'TwoTicktes GmbH',
+                cardsGroup: 'TwoTicktes.de GmbH',
                 cards: [{
-                    img: pscore,
-                    cardTitle: "PSCORE",
-                    cardText: "A WordPress website (maintaining).",
+                    img: twotickets,
+                    cardTitle: "TwoTickets.de",
+                    cardText: "A Django website, that sells memberships to its users. Members can win " +
+                        "a pair of tickets for any event whose organizers collaborates with TwoTickets (maintaining).",
                     buttonWebsite: 'http://pscore.org/home',
                     buttonCode: ''
-                },
-                    {
-                        img: pscoreedu,
-                        cardTitle: "PSCORE EDU",
-                        cardText: "A WordPress website (maintaining).",
-                        buttonWebsite: 'http://edu.pscore.org/en/',
-                        buttonCode: ''
-                    },
-                    {
-                        img: munscr,
-                        cardTitle: "MUNSCR",
-                        cardText: "A WordPress website  (build from scratch).",
-                        buttonWebsite: 'http://munscr.com',
-                        buttonCode: ''
-                    }]
+                },]
             }
             ,
 
@@ -147,7 +144,8 @@ const data = {
 function Projects() {
 
     return (
-        <div>
+        <div className="Projects">
+            <a name="projects"/>
             <Container className="d-flex justify-content-center align-items-center aboutme-header">
                 <h1>My Projects</h1>
             </Container>
