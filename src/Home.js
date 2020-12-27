@@ -46,7 +46,7 @@ var TxtType = function(el, toRotate, period) {
         }
         if(this.txt === ''){
             this.txtBatchToggle = !(this.txtBatchToggle)
-            this.txtBatch = this.txtBatchToggle ? 1 : 0;
+            this.txtBatch = this.txtBatchToggle ? 0 : 0;
         }
         if(this.txt.length === 190){
             delta = 700
@@ -84,10 +84,10 @@ function Home() {
   return (
       <div className="Home d-flex flex-column justify-content-center">
           <a name="home"/>
-          <Container className="shell">
+          <Container fluid className="shell">
               <h1><span className="cl"><span className="green">priska</span>:<span className="blue">~</span>$ </span>
                   <a href="/" className="typewrite" data-period="2000"
-                     datatype='[["node hello.js", "Hello, World!", "I am Priska Kohnen.", "A full-stack Web Developer."],["This is just the beginning..."]]'>
+                      datatype='[["node hello.js", "Hello, World!", "I am Priska Kohnen.", "A full-stack Web Developer."]]'>{/*,["This is just the beginning..."]]'>*/}
                   <span className="wrap"/>
                   </a>
               </h1>

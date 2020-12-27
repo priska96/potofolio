@@ -9,7 +9,7 @@ import twotickets from './images/twotickets_small.png';
 import './App.css';
 import React from 'react'
 import PropTypes from "prop-types";
-import {Button, ButtonGroup, Card, CardGroup, Container, Jumbotron} from 'react-bootstrap';
+import {Button, ButtonGroup, Card, CardGroup, Carousel, Container, Jumbotron} from 'react-bootstrap';
 
 class Project extends React.Component {
     constructor(props) {
@@ -27,28 +27,50 @@ class Project extends React.Component {
                 <Jumbotron className="project-group">
                     <h2>{this.cardsGroup}</h2>
                 </Jumbotron>
-                <CardGroup className="flex-row justify-content-around align-items-start">
+                <CardGroup className="flex-row justify-content-around align-items-start visible-lg">
                     {this.cards.map((card, i) => (
-                        <Card key={i} className="item project">
+                        <Card key={i}>
                             <Card.Img variant="top" src={card.img}/>
-                            <div className="item-overlay bottom">
+                            <div className="card-overlay bottom">
                                 <Card.Body>
                                     <Card.Title>{card.cardTitle}</Card.Title>
                                     <Card.Text>{card.cardText}</Card.Text>
-                                    <ButtonGroup vertical className={card.buttonCode ? "justify-content-between three-btns": "justify-content-between"}>
-                                        <Button className="flex-grow-0" variant="loading"
+                                    <ButtonGroup className="justify-content-between">
+                                        <Button variant="loading"
                                                     href={card.buttonWebsite}>View Page</Button>
                                         {card.buttonCode ?
-                                            <Button className="flex-grow-0" variant="loading"
+                                            <Button variant="loading"
                                                     href={card.buttonCode}>View Code</Button> : null}
-                                            <Button className="flex-grow-0" variant="loading"
-                                                    onClick={this.viewDetail}>View Details</Button>
+                                            {/*<Button variant="loading"*/}
+                                            {/*        onClick={this.viewDetail}>View Details</Button>*/}
                                     </ButtonGroup>
                                 </Card.Body>
                             </div>
                         </Card>)
                     )}
                 </CardGroup>
+                <Carousel className="hidden-lg">
+                    {this.cards.map((card, i) => (
+                    <Carousel.Item as={Card}>
+                        <Card.Img variant="top" src={card.img}/>
+                        <div className="card-overlay bottom">
+                            <Card.Body>
+                                <Card.Title>{card.cardTitle}</Card.Title>
+                                <Card.Text>{card.cardText}</Card.Text>
+                                <ButtonGroup  className="justify-content-between">
+                                    <Button variant="loading"
+                                                href={card.buttonWebsite}>View Page</Button>
+                                    {card.buttonCode ?
+                                        <Button variant="loading"
+                                                href={card.buttonCode}>View Code</Button> : null}
+                                        {/*<Button variant="loading"*/}
+                                        {/*        onClick={this.viewDetail}>View Details</Button>*/}
+                                </ButtonGroup>
+                            </Card.Body>
+                        </div>
+                    </Carousel.Item>)
+                    )}
+                </Carousel>
             </React.Fragment>
         )
     }
@@ -82,7 +104,7 @@ const data = {
                 cards: [{
                     img: jabe,
                     cardTitle: "JABE",
-                    cardText: "A plain HTML, CSS and JavaScript build restaurant website (build from scratch).",
+                    cardText: "A plain HTML, CSS and jQuery restaurant website (build from scratch).",
                     buttonWebsite: 'https://jaberestaurant.de',
                     buttonCode: 'https://github.com/priska96/jaberestaurant'
                 },
@@ -119,7 +141,7 @@ const data = {
                     {
                         img: munscr,
                         cardTitle: "MUNSCR",
-                        cardText: "A WordPress website  (build from scratch).",
+                        cardText: "A WordPress website (build from scratch).",
                         buttonWebsite: 'http://munscr.com',
                         buttonCode: ''
                     }]
@@ -130,7 +152,7 @@ const data = {
                     img: twotickets,
                     cardTitle: "TwoTickets.de",
                     cardText: "A Django website, that sells memberships to its users. Members can win " +
-                        "a pair of tickets for any event whose organizers collaborates with TwoTickets (maintaining).",
+                        "a pair of tickets various events (maintaining).",
                     buttonWebsite: 'http://pscore.org/home',
                     buttonCode: ''
                 },]

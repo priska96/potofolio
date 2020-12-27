@@ -17,6 +17,7 @@ import './App.css';
 import React from 'react'
 import {Button, Col, Container, Image, Jumbotron, Row} from 'react-bootstrap';
 
+
 function AboutMe() {
     return (
         <div className="AboutMe">
@@ -43,46 +44,25 @@ function AboutMe() {
                     </p>
                 </div>
             </Jumbotron>
-            {/*<Jumbotron className="d-flex flex-column justify-content-center align-items-end me img-container">*/}
-            {/*    <div className="about">*/}
-            {/*        <h1>About Me</h1>*/}
-            {/*        <p>*/}
-            {/*            I'm a Berlin based full-stack Web Developer, building user-centric webpages. I currently work as a*/}
-            {/*            Django developer for TwoTickets.de in Berlin, Germany, which is where my passion for design and*/}
-            {/*            development has its roots. During my studies in 2017 I joined the IT team and finished various*/}
-            {/*            projects. Wandering between logical back-end problems and creativity needing front-end issues*/}
-            {/*            brings me joy and keeps me at ease. I love visuals and animations, what perhaps comes from my*/}
-            {/*            hobbies*/}
-            {/*            being drawing and painting, as well as the hours spent playing and creating video games and RPGs.*/}
-            {/*            Taking first steps in freelance works paved me the way to experience Shopify and WordPress, which*/}
-            {/*            are*/}
-            {/*            fun to use, if you want something neat and quick. But building everything from scratch and choosing*/}
-            {/*            your programming environment is even better!*/}
-            {/*            Being at the beginning of my career I can't wait to learn new technologies and concepts and see,*/}
-            {/*            where*/}
-            {/*            they take me to.*/}
-            {/*        </p>*/}
-            {/*    </div>*/}
-            {/*</Jumbotron>*/}
             <Container className="d-flex justify-content-center align-items-center aboutme-header">
                 <h2>Skills</h2>
             </Container>
             <Container>
                 <Row className="p-3">
-                    <Image src={html} className="skills"/>
-                    <Image src={css} className="skills"/>
-                    <Image src={javascript} className="skills"/>
+                    <Image src={html} className="skills left"/>
+                    <Image src={css} className="skills left"/>
+                    <Image src={javascript} className="skills right"/>
                 </Row>
                 <Row className="px-3">
-                    <Image src={sass} className="skills"/>
-                    <Image src={bootstrap} className="skills"/>
-                    <Image src={jquery} className="skills"/>
+                    <Image src={sass} className="skills right"/>
+                    <Image src={bootstrap} className="skills left"/>
+                    <Image src={jquery} className="skills right"/>
                 </Row>
                 <Row className="p-3">
-                    <Image src={react} className="skills"/>
-                    <Image src={django} className="skills"/>
-                    <Image src={python} className="skills"/>
-                    <Image src={wordpress} className="skills"/>
+                    <Image src={react} className="skills left"/>
+                    <Image src={django} className="skills right"/>
+                    <Image src={python} className="skills left"/>
+                    <Image src={wordpress} className="skills right"/>
                 </Row>
             </Container>
         </div>

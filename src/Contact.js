@@ -10,25 +10,25 @@ function Contact() {
                 <h1>Contact</h1>
             </Container>
             <Jumbotron className="bg-beige">
-                <p className="w-50 mx-auto">
+                <p className="w-lg-50 w-75 mx-auto">
                     If you want to get in touch with me, quickly fill out the form below. Let's talk about a project
                     collaboration or just say Hi to me! Of course you can also send me an email directly
                     to <a href="mailto:priskakohnen@gmail.com" className="highlight">priskakohnen@gmail.com</a>
                 </p>
-                    <Form className="w-50 mx-auto">
-                        <Form.Row>
-                            <Form.Group controlId="formEmail" className="flex-grow-1 mr-2">
+                    <Form className="w-lg-50 w-75 mx-auto">
+                        <Form.Row className="justify-content-between m-0">
+                            <Form.Group controlId="formEmail">
                                 <Form.Label>Your Email</Form.Label>
                                 <Form.Control type="email" placeholder="Enter email"/>
                             </Form.Group>
-                            <Form.Group controlId="formName" className="flex-grow-1 ml-2">
+                            <Form.Group controlId="formName">
                                 <Form.Label>Your Name</Form.Label>
                                 <Form.Control type="text" placeholder="Enter full name"/>
                             </Form.Group>
                         </Form.Row>
                          <Form.Group controlId="formMessage">
                             <Form.Label>Your Message</Form.Label>
-                            <Form.Control as="textarea" rows={3} />
+                            <Form.Control as="textarea" rows={3} placeholder="Enter message"/>
                           </Form.Group>
                         <Button variant="loading" type="submit" className="btn-big">Submit
                         </Button>
