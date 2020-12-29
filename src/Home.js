@@ -87,8 +87,8 @@ function Home() {
           <Container fluid className="shell">
               <h1><span className="cl"><span className="green">priska</span>:<span className="blue">~</span>$ </span>
                   <a href="/" className="typewrite" data-period="2000"
-                      datatype='[["node hello.js", "Hello, World!", "I am Priska Kohnen.", "A full-stack Web Developer."]]'>{/*,["This is just the beginning..."]]'>*/}
-                  <span className="wrap"/>
+                      datatype='[["node hello.js", "Hello, World!", "I am Priska Kohnen.", "A full-stack Web Developer."]]' aria-label="node hello.js Hello, World! I am Priska Kohnen. A full-stack Web Developer. clear">{/*,["This is just the beginning..."]]'>*/}
+                  <span className="wrap" aria-hidden="true"/>
                   </a>
               </h1>
               {/*<h1>$ <span id="typedtext"></span></h1>*/}

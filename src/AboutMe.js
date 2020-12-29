@@ -53,6 +53,7 @@ function AboutMe() {
                     </div>
                 </Container>
             </Jumbotron>
+            <Jumbotron className="skill-jumbotron">
                 <h2>Skills</h2>
                 <Container className="skill-container">
                     <Row className="p-3">
@@ -72,6 +73,7 @@ function AboutMe() {
                         <Image src={wordpress} className="skills right"/>
                     </Row>
                 </Container>
+                </Jumbotron>
         </div>
     );
 }

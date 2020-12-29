@@ -22,12 +22,18 @@ class Project extends React.Component {
 
     }
     render() {
+        let controls = false;
+        let indicators = false;
+        if(this.cards.length > 1){
+            controls = true;
+            indicators = true;
+        }
         return (
             <React.Fragment>
                 <Jumbotron className="project-group">
                     <h2>{this.cardsGroup}</h2>
                 </Jumbotron>
-                <CardGroup className="flex-row justify-content-around align-items-start visible-lg">
+                <CardGroup className="flex-row justify-content-around align-items-start visible-md">
                     {this.cards.map((card, i) => (
                         <Card key={i}>
                             <Card.Img variant="top" src={card.img}/>
@@ -37,10 +43,10 @@ class Project extends React.Component {
                                     <Card.Text>{card.cardText}</Card.Text>
                                     <ButtonGroup className="justify-content-between">
                                         <Button variant="loading"
-                                                    href={card.buttonWebsite}>View Page</Button>
+                                                    href={card.buttonWebsite} target="_blank">View Page</Button>
                                         {card.buttonCode ?
                                             <Button variant="loading"
-                                                    href={card.buttonCode}>View Code</Button> : null}
+                                                    href={card.buttonCode} target="_blank">View Code</Button> : null}
                                             {/*<Button variant="loading"*/}
                                             {/*        onClick={this.viewDetail}>View Details</Button>*/}
                                     </ButtonGroup>
@@ -49,7 +55,7 @@ class Project extends React.Component {
                         </Card>)
                     )}
                 </CardGroup>
-                <Carousel className="hidden-lg">
+                <Carousel className="hidden-md" controls={controls} indicators={indicators}>
                     {this.cards.map((card, i) => (
                     <Carousel.Item as={Card}>
                         <Card.Img variant="top" src={card.img}/>
@@ -59,10 +65,10 @@ class Project extends React.Component {
                                 <Card.Text>{card.cardText}</Card.Text>
                                 <ButtonGroup  className="justify-content-between">
                                     <Button variant="loading"
-                                                href={card.buttonWebsite}>View Page</Button>
+                                                href={card.buttonWebsite} target="_blank">View Page</Button>
                                     {card.buttonCode ?
                                         <Button variant="loading"
-                                                href={card.buttonCode}>View Code</Button> : null}
+                                                href={card.buttonCode} target="_blank">View Code</Button> : null}
                                         {/*<Button variant="loading"*/}
                                         {/*        onClick={this.viewDetail}>View Details</Button>*/}
                                 </ButtonGroup>
@@ -96,7 +102,7 @@ const data = {
                     img: nutritionplanner,
                     cardTitle: "Mealplan Generator",
                     cardText: "A Django website that automatically generates user-specific weekly meal plans (build from scratch).",
-                    buttonWebsite: 'https://jaberestaurant.de',
+                    buttonWebsite: '',
                     buttonCode: 'https://github.com/priska96/nutritionplanner'
                 }]
             }, {
@@ -127,21 +133,21 @@ const data = {
                 cards: [{
                     img: pscore,
                     cardTitle: "PSCORE",
-                    cardText: "A WordPress website (maintaining).",
+                    cardText: "A WordPress website about human rights in North Korea and North Korean defectors (maintaining).",
                     buttonWebsite: 'http://pscore.org/home',
                     buttonCode: ''
                 },
                     {
                         img: pscoreedu,
                         cardTitle: "PSCORE EDU",
-                        cardText: "A WordPress website (maintaining).",
+                        cardText: "A WordPress website to provide tutoring classes for North Korean defectors (maintaining).",
                         buttonWebsite: 'http://edu.pscore.org/en/',
                         buttonCode: ''
                     },
                     {
                         img: munscr,
                         cardTitle: "MUNSCR",
-                        cardText: "A WordPress website (build from scratch).",
+                        cardText: "A WordPress website about a Model United Nations about successful Korean reunification (build from scratch).",
                         buttonWebsite: 'http://munscr.com',
                         buttonCode: ''
                     }]
@@ -152,8 +158,8 @@ const data = {
                     img: twotickets,
                     cardTitle: "TwoTickets.de",
                     cardText: "A Django website, that sells memberships to its users. Members can win " +
-                        "a pair of tickets various events (maintaining).",
-                    buttonWebsite: 'http://pscore.org/home',
+                        "a pair of tickets for various events (maintaining).",
+                    buttonWebsite: 'https://twotickets.de',
                     buttonCode: ''
                 },]
             }

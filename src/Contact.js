@@ -12,12 +12,13 @@ function Contact() {
             <Jumbotron className="bg-beige">
 
             <h1>Contact</h1>
-                <p className="w-lg-50 w-75 mx-auto">
+                <Container>
+                <p className="w-md-75 w-100 mx-auto">
                     If you want to get in touch with me, quickly fill out the form below. Let's talk about a project
                     collaboration or just say Hi to me! Of course you can also send me an email directly
                     to <a href="mailto:priskakohnen@gmail.com" className="highlight">priskakohnen@gmail.com</a>
                 </p>
-                    <Form className="w-lg-50 w-75 mx-auto">
+                    <Form className="w-md-75 w-100 mx-auto">
                         <Form.Row className="justify-content-between m-0">
                             <Form.Group controlId="formEmail">
                                 <Form.Label>Your Email</Form.Label>
@@ -35,6 +36,7 @@ function Contact() {
                         <Button variant="loading" type="submit" className="btn-big">Submit
                         </Button>
                     </Form>
+                    </Container>
             </Jumbotron>
         </div>
     );

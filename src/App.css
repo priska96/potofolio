@@ -11,7 +11,7 @@ body {
 }
 
 p {margin-bottom: 1rem;}
-p:first-of-type{
+p:first-of-type:not(.card-text){
     margin: 0;
 }
 h1, h2, h3, h4, h5 {
@@ -120,9 +120,9 @@ small, .text_small {
     background-color: #f3efde;
 }
 
-@media screen and (min-width: 992px) {
-    .w-lg-50 {
-        width: 50% !important;
+@media screen and (min-width: 768px) {
+    .w-md-75{
+        width: 75% !important;
     }
 }
 
@@ -294,7 +294,9 @@ a.typewrite:hover {
     cursor: default;
     text-decoration: none;
 }
-
+.aboutme{
+    padding: 0;
+}
 .me-image{
     position: relative;
     overflow: hidden;
@@ -349,36 +351,33 @@ div.about > p > span {
         margin: 0;
     }
 }
-
-
-.skill-container{
-    padding-bottom: 4rem;
-}
-
-@media screen and (max-width: 575.98px) {
-
-    .skills{
-        height: 2em;
-    }
-}
-
 @media screen and (max-width: 991.98px) {
     .img-container2 {
         background-color: transparent;
     }
-
-
+}
+.skill-jumbotron{
+    background-color: transparent;
+    padding-top: 0;
+}.skill-container{
+    padding: 0;
 }
 
 .skills {
-    height: 3em;
+    height: 1.5em;
     flex-grow: 1;
     animation-timing-function: ease-in-out;
     position: relative;
 }
-@media screen and (max-width: 575.98px) {
+@media screen and (min-width: 314px) {
+
     .skills{
         height: 2em;
+    }
+}
+@media screen and (min-width: 576px) {
+    .skills{
+        height: 3em;
     }
 }
 @media screen and (min-width: 720px) {
@@ -465,30 +464,25 @@ div.about > p > span {
     height: 150px;
     text-align: center;
 }
-
+.project-group h2{
+    margin-top: 0;
+}
 .card-group {
     margin: -180px 0 100px;
     display: none;
 }
 
-.card-text {
-    line-height: 2;
-}
-
 .carousel {
-    margin: -90px 0 50px;
+    margin: -81px 0 50px;
 }
-
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 576px) {
     .project-group {
         height: 300px;
     }
-
     .carousel {
-        margin: -180px 0 100px;
+        margin: -195px 0 50px;
     }
 }
-
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
     display: flex;
 }
@@ -510,12 +504,12 @@ div.about > p > span {
     height: 5px;
 }
 
-@media screen and (min-width: 992px) {
-    .card-group.visible-lg {
+@media screen and (min-width: 768px) {
+    .card-group.visible-md {
         display: flex;
     }
 
-    .carousel.hidden-lg {
+    .carousel.hidden-md {
         display: none;
     }
 }
@@ -527,43 +521,48 @@ div.about > p > span {
 }
 
 .card:hover .card-overlay.bottom {
-    bottom: 0;
+    bottom: 0rem;
 }
 
 .card-overlay {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    bottom: 0rem;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     overflow: hidden;
     text-align: center;
-    /* fix text transition issue for .left and .right but need to overwrite left and right properties in .right */
     width: 100%;
-    transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+    transition: bottom 0.3s;
     display: flex;
     align-items: center;
 }
-
+.card-body {
+    padding: 1rem;
+}
+@media screen and (min-width: 448px) {
+    .card-body{
+        padding: 1.25rem;
+    }
+}
 .card-overlay.bottom {
     bottom: 100%;
 }
 
 .carousel-inner {
-    width: 90%;
-    left: 5%;
+    width: 80%;
+    left: 10%;
 }
 
-@media screen and (min-width: 540px) {
+
+@media screen and (min-width: 576px) {
     .carousel-inner {
         width: 75%;
         left: 12.5%;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
     .card {
         width: 45%;
         margin: 0 0 1rem !important;
