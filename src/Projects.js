@@ -168,9 +168,10 @@ function Projects() {
     return (
         <div className="Projects">
             <a name="projects"/>
-            <Container className="d-flex justify-content-center align-items-center aboutme-header">
-                <h1>My Projects</h1>
-            </Container>
+            <h1>My Projects</h1>
+            {/*<Container className="d-flex justify-content-center align-items-center aboutme-header">*/}
+            {/*    */}
+            {/*</Container>*/}
             {data.content.body.map(props => <Project
                 cardsGroup={props.cardsGroup}
                 cards={props.cards}/>

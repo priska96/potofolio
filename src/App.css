@@ -1,55 +1,64 @@
-* {
-    font-family: 'Helvetica', sans-serif;
-}
-
 html, body {
     overflow-x: hidden;
 }
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
+html {font-size: 100%;} /*16px*/
+body {
+  background: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
 }
 
-
+p {margin-bottom: 1rem;}
+p:first-of-type{
+    margin: 0;
+}
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 2.38rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.3;
+    text-align: center;
+}
 h1 {
-    font-size: 36px;
+    margin-top: 0;
+    font-size: 2rem;
 }
+h2 {font-size: 1.4rem;}
+h3 {font-size: 1.2rem;}
+h4 {font-size: 1.1rem;}
+h5 {font-size: 1rem;}
 
-h2 {
-    font-size: 24px;
+small, .text_small {
+    font-size: 0.8rem;
 }
-
-h3 {
-    font-size: 22px;
-}
-
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 576px) {
     h1 {
-        font-size: 52px;
+        margin-top: 0;
+        font-size: 2.552rem;
     }
 
-    h2 {
-        font-size: 48px;
-    }
+    h2 {font-size: 1.625rem;}
+    h3 {font-size: 1.375rem;}
+    h4 {font-size: 1.125rem;}
+    h5 {font-size: 1rem;}
 
-    h3 {
-        font-size: 36px;
+    small, .text_small {
+        font-size: 0.8rem;
     }
 }
-
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 768px) {
     h1 {
-        font-size: 64px;
+      margin-top: 0;
+      font-size: 3.052rem;
     }
+    h2 {font-size: 2.441rem;}
+    h3 {font-size: 1.953rem;}
+    h4 {font-size: 1.563rem;}
+    h5 {font-size: 1.25rem;}
 
-    h2 {
-        font-size: 52px;
-    }
-
-    h3 {
-        font-size: 48px;
-    }
+    small, .text_small {font-size: 0.8rem;}
 }
 
 .btn {
@@ -64,10 +73,26 @@ h3 {
     font-size: 0.8rem;
 }
 @media screen and (min-width: 1200px) {
-    .btn{
+    h1 {
+      margin-top: 0;
+      font-size: 3.552rem;
+    }
+
+    h2 {font-size: 3.441rem;}
+
+    h3 {font-size: 1.953rem;}
+
+    h4 {font-size: 2.063rem;}
+
+    h5 {font-size: 1.75rem;}
+
+    small, .text_small {font-size: 1.3rem;}
+
+    .btn {
         font-size: 1rem;
     }
 }
+
 .btn:focus {
     outline: none;
 }
@@ -91,10 +116,6 @@ h3 {
 
 }
 
-p{
-    line-height: 2.5;
-    letter-spacing: 1.5px;
-}
 .bg-beige {
     background-color: #f3efde;
 }
@@ -130,20 +151,25 @@ nav.navbar {
 .Home, .AboutMe, .Projects, .Contact {
     margin: 1.5em 0;
 }
-.Contact{
+
+.Contact {
     margin-bottom: 0;
 }
+
 .aboutme-header {
     height: 15vh;
 }
+
 @media screen and (min-width: 720px) {
     .Home, .AboutMe, .Projects, .Contact {
-    margin: 3em 0;
-}
+        margin: 3em 0;
+    }
+
     .aboutme-header {
-    height: 25vh;
+        height: 25vh;
+    }
 }
-}
+
 div.Home {
     background: url("./images/jukan-tateisi-bJhT_8nbUA0-unsplash.jpg");
     background-size: cover;
@@ -164,14 +190,77 @@ div.Home {
 .shell {
     background-color: rgba(0, 0, 0, 0.5);
     width: 90%;
-    min-height: 420px;
+    min-height: 550px;
+    padding: 15px;
     /*animation-name: pop-in;
     animation-duration: 1s;*/
 }
-
-@media screen and (min-width: 992px) {
-    .shell {
+@media screen and (min-width: 272px){
+    .shell{
+        min-height: 530px;
+    }
+}
+@media screen and (min-width: 314px){
+    .shell{
+        min-height: 446px;
+    }
+}
+@media screen and (min-width: 336px){
+    .shell{
+        min-height: 405px;
+    }
+}
+@media screen and (min-width: 357px){
+    .shell{
+        min-height: 446px;
         width: 80%;
+    }
+}
+@media screen and (min-width: 402px){
+    .shell{
+        min-height: 363px;
+        width: 80%;
+    }
+}
+@media screen and (min-width: 498px){
+    .shell{
+        min-height: 322px;
+    }
+}
+@media screen and (min-width: 576px){
+    .shell{
+        min-height: 455px;
+    }
+}
+@media screen and (min-width: 626px){
+    .shell{
+        min-height: 402px;
+    }
+}
+@media screen and (min-width: 749px){
+    .shell{
+        min-height: 349px;
+    }
+}
+@media screen and (min-width: 768px){
+    .shell{
+        min-height: 475px;
+    }
+}
+@media screen and (min-width: 887px){
+    .shell{
+        min-height: 411px;
+        width: 80%;
+    }
+}
+@media screen and (min-width: 1034px){
+    .shell{
+        min-height: 348px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .shell{
+        min-height: 400px;
     }
 }
 
@@ -179,7 +268,10 @@ div.Home {
     font-family: 'monospace', sans-serif;
     font-weight: bolder;
 }
-
+.shell h1{
+    margin: 0;
+    text-align: left;
+}
 span.cl {
     color: white;
 }
@@ -195,8 +287,6 @@ span.blue {
 a.typewrite {
     color: white;
     text-decoration: none;
-
-    line-height: 1.5 !important;
     letter-spacing: unset !important;
 }
 
@@ -205,92 +295,79 @@ a.typewrite:hover {
     text-decoration: none;
 }
 
-.img-container2 {
-    padding: 4rem 0;
+.me-image{
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 45%;
+    border-top-left-radius: 5em;
+    border-bottom-right-radius: 0;
 }
-
-.me-image {
-    width: 100%;
-    margin: 0;
-}
-
 .me-image img {
-    width: 100%;
+    max-width: 100%;
+	transform: none;
+    position: relative;
+    top: -5vh;
 }
 
 div.about {
     padding: 2rem;
-    position: relative;
-    width: 85%;
     border-radius: 5em;
+    border-bottom-left-radius: 0;
     background-color: #f3efde;
-    margin: -10em auto 0;
+    margin: -15vh auto 0;
+    z-index: 1;
 }
-
-@media screen and (max-width: 1139px) {
-    .img-container2 {
-        background-color: transparent;
-    }
-}
-
-@media screen and (min-width: 1140px) {
-    .img-container2 {
-        padding: 4rem 2rem;
-    }
-
-    .me-image {
-        width: 888px;
-        margin-left: -2rem;
-    }
-
-    .me-image img {
-        width: initial;
-    }
-
-    div.about {
-        padding: 2rem;
-        position: absolute;
-        right: 2rem;
-        z-index: 2;
-        background-color: rgba(248, 249, 250, 0.7);
-        width: 60%;
-        max-width: 1100px;
-        max-height: 1062px;
-        margin: 0;
-        border-radius: 0;
-    }
-}
-
-@media screen and (min-width: 1560px) {
-    div.about {
-        padding: 2rem 0 2rem 2rem;
-        position: relative;
-        right: initial;
-        z-index: 0;
-        background-color: transparent;
-
-    }
-
-}
-
 div.about > p {
-    font-size: 1em;
-    line-height: 2;
-    margin: 0;
     text-align: justify;
     word-wrap: break-word;
     hyphens: auto;
 }
 
-@media screen and (min-width: 753px) {
-    div.about > p {
-        font-size: 1.2em;
-        line-height: 2.5;
+div.about > p > span {
+    font-weight: bold;
+}
+@media screen and (min-width: 768px){
+    .me-image img {
+        top: -10vh;
+    }
+    div.about {
+        margin: -20vh auto 0;
+    }
+}
+@media screen and (min-width: 992px){
+    .me-image{
+
+    border-bottom-right-radius: 5em;
+    }
+    .me-image img {
+        top: 0;
+        transform: scale(1.1, 1.1);
+    }
+    div.about {
+        padding: 0 0 0 2rem;
+        border-radius: 1em;
+        margin: 0;
     }
 }
 
-div.about > p > span {
-    font-weight: bold;
+
+.skill-container{
+    padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 575.98px) {
+
+    .skills{
+        height: 2em;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .img-container2 {
+        background-color: transparent;
+    }
+
+
 }
 
 .skills {
@@ -299,30 +376,25 @@ div.about > p > span {
     animation-timing-function: ease-in-out;
     position: relative;
 }
-@media screen and (min-width: 720px){
+@media screen and (max-width: 575.98px) {
+    .skills{
+        height: 2em;
+    }
+}
+@media screen and (min-width: 720px) {
     .skills {
         height: 5em;
     }
 }
 
 .skills.left {
-    animation: move-in-left 4s infinite;
+    animation: move-in-left 8s infinite;
     animation-timing-function: ease-in-out;
 }
 
 .skills.right {
-    animation: move-in-right 4s infinite;
-    animation-timing-function: ease-in-out;
-}
-
-.skills.top {
-    animation: move-in-top-left 4s infinite;
-    animation-timing-function: ease-in-out;
-}
-
-.skills.bottom {
-    animation: move-in-bottom-right 4s infinite;
-    animation-timing-function: ease-in-out;
+    animation: move-in-right 8s infinite;
+    animation-timing-function: ease-out;
 }
 
 @keyframes move-in-left {
@@ -398,20 +470,25 @@ div.about > p > span {
     margin: -180px 0 100px;
     display: none;
 }
+
 .card-text {
     line-height: 2;
 }
+
 .carousel {
     margin: -90px 0 50px;
 }
+
 @media screen and (min-width: 540px) {
     .project-group {
-    height: 300px;
+        height: 300px;
+    }
+
+    .carousel {
+        margin: -180px 0 100px;
+    }
 }
-   .carousel {
-    margin: -180px 0 100px;
-   }
-}
+
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
     display: flex;
 }
@@ -442,11 +519,13 @@ div.about > p > span {
         display: none;
     }
 }
+
 .card {
     flex: unset !important;
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, .125);
+    border: 1px solid rgba(0, 0, 0, .125) !important;
 }
+
 .card:hover .card-overlay.bottom {
     bottom: 0;
 }
@@ -476,12 +555,14 @@ div.about > p > span {
     width: 90%;
     left: 5%;
 }
+
 @media screen and (min-width: 540px) {
     .carousel-inner {
         width: 75%;
         left: 12.5%;
     }
 }
+
 @media screen and (min-width: 992px) {
     .card {
         width: 45%;
