@@ -1,64 +1,114 @@
 html, body {
     overflow-x: hidden;
-}
-html {font-size: 100%;} /*16px*/
-body {
-  background: white;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
-  color: #000000;
+    scroll-behavior: smooth;
 }
 
-p {margin-bottom: 1rem;}
-p:first-of-type:not(.card-text){
+html {
+    font-size: 100%;
+}
+
+/*16px*/
+body {
+    background: white;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #000000;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+p:first-of-type:not(.card-text):not(.contact-text) {
     margin: 0;
 }
+
 h1, h2, h3, h4, h5 {
-  margin: 3rem 0 2.38rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  line-height: 1.3;
+    margin: 3rem 0 2.38rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    line-height: 1.3;
     text-align: center;
 }
+
 h1 {
     margin-top: 0;
     font-size: 2rem;
 }
-h2 {font-size: 1.4rem;}
-h3 {font-size: 1.2rem;}
-h4 {font-size: 1.1rem;}
-h5 {font-size: 1rem;}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
 
 small, .text_small {
     font-size: 0.8rem;
 }
+
 @media screen and (min-width: 576px) {
     h1 {
         margin-top: 0;
         font-size: 2.552rem;
     }
 
-    h2 {font-size: 1.625rem;}
-    h3 {font-size: 1.375rem;}
-    h4 {font-size: 1.125rem;}
-    h5 {font-size: 1rem;}
+    h2 {
+        font-size: 1.625rem;
+    }
+
+    h3 {
+        font-size: 1.375rem;
+    }
+
+    h4 {
+        font-size: 1.125rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
 
     small, .text_small {
         font-size: 0.8rem;
     }
 }
+
 @media screen and (min-width: 768px) {
     h1 {
-      margin-top: 0;
-      font-size: 3.052rem;
+        margin-top: 0;
+        font-size: 3.052rem;
     }
-    h2 {font-size: 2.441rem;}
-    h3 {font-size: 1.953rem;}
-    h4 {font-size: 1.563rem;}
-    h5 {font-size: 1.25rem;}
 
-    small, .text_small {font-size: 0.8rem;}
+    h2 {
+        font-size: 2.441rem;
+    }
+
+    h3 {
+        font-size: 1.953rem;
+    }
+
+    h4 {
+        font-size: 1.563rem;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+    }
+
+    small, .text_small {
+        font-size: 0.8rem;
+    }
 }
 
 .btn {
@@ -72,21 +122,32 @@ small, .text_small {
     cursor: pointer;
     font-size: 0.8rem;
 }
+
 @media screen and (min-width: 1200px) {
     h1 {
-      margin-top: 0;
-      font-size: 3.552rem;
+        margin-top: 0;
+        font-size: 3.552rem;
     }
 
-    h2 {font-size: 3.441rem;}
+    h2 {
+        font-size: 3.441rem;
+    }
 
-    h3 {font-size: 1.953rem;}
+    h3 {
+        font-size: 1.953rem;
+    }
 
-    h4 {font-size: 2.063rem;}
+    h4 {
+        font-size: 2.063rem;
+    }
 
-    h5 {font-size: 1.75rem;}
+    h5 {
+        font-size: 1.75rem;
+    }
 
-    small, .text_small {font-size: 1.3rem;}
+    small, .text_small {
+        font-size: 1.3rem;
+    }
 
     .btn {
         font-size: 1rem;
@@ -121,7 +182,7 @@ small, .text_small {
 }
 
 @media screen and (min-width: 768px) {
-    .w-md-75{
+    .w-md-75 {
         width: 75% !important;
     }
 }
@@ -140,6 +201,31 @@ nav.navbar {
     font-weight: bold;
 }
 
+.navbar-toggler {
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 767.98px) {
+    .navbar-collapse > div.navbar-nav {
+        width: 150px;
+        background-color: #f8f9fa;
+        margin-left: auto;
+        margin-right: 0 !important;
+        border-top-left-radius: 5em;
+        border-bottom-left-radius: 5em;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) drop-shadow(0 6px 20px rgba(0, 0, 0, 0.19));
+    }
+
+    .navbar-collapse > div.navbar-nav a {
+        text-align: right !important;
+        padding-right: 1rem;
+    }
+}
+
+.navbar-brand {
+    margin-bottom: 12px;
+}
+
 .logo {
     height: 70px;
 }
@@ -156,6 +242,10 @@ nav.navbar {
     margin-bottom: 0;
 }
 
+.jumbotron:last-child {
+    margin-bottom: 0;
+}
+
 .aboutme-header {
     height: 15vh;
 }
@@ -163,6 +253,10 @@ nav.navbar {
 @media screen and (min-width: 720px) {
     .Home, .AboutMe, .Projects, .Contact {
         margin: 3em 0;
+    }
+
+    .Contact {
+        margin-bottom: 0;
     }
 
     .aboutme-header {
@@ -195,71 +289,83 @@ div.Home {
     /*animation-name: pop-in;
     animation-duration: 1s;*/
 }
-@media screen and (min-width: 272px){
-    .shell{
+
+@media screen and (min-width: 272px) {
+    .shell {
         min-height: 530px;
     }
 }
-@media screen and (min-width: 314px){
-    .shell{
+
+@media screen and (min-width: 314px) {
+    .shell {
         min-height: 446px;
     }
 }
-@media screen and (min-width: 336px){
-    .shell{
+
+@media screen and (min-width: 336px) {
+    .shell {
         min-height: 405px;
     }
 }
-@media screen and (min-width: 357px){
-    .shell{
-        min-height: 446px;
-        width: 80%;
+
+@media screen and (min-width: 357px) {
+    .shell {
+        min-height: 363px;
     }
 }
-@media screen and (min-width: 402px){
-    .shell{
+
+@media screen and (min-width: 402px) {
+    .shell {
         min-height: 363px;
         width: 80%;
     }
 }
-@media screen and (min-width: 498px){
-    .shell{
+
+@media screen and (min-width: 498px) {
+    .shell {
         min-height: 322px;
     }
 }
-@media screen and (min-width: 576px){
-    .shell{
+
+@media screen and (min-width: 576px) {
+    .shell {
         min-height: 455px;
     }
 }
-@media screen and (min-width: 626px){
-    .shell{
+
+@media screen and (min-width: 626px) {
+    .shell {
         min-height: 402px;
     }
 }
-@media screen and (min-width: 749px){
-    .shell{
+
+@media screen and (min-width: 749px) {
+    .shell {
         min-height: 349px;
     }
 }
-@media screen and (min-width: 768px){
-    .shell{
+
+@media screen and (min-width: 768px) {
+    .shell {
         min-height: 475px;
     }
 }
-@media screen and (min-width: 887px){
-    .shell{
+
+@media screen and (min-width: 887px) {
+    .shell {
         min-height: 411px;
         width: 80%;
     }
 }
-@media screen and (min-width: 1034px){
-    .shell{
+
+@media screen and (min-width: 1034px) {
+    .shell {
         min-height: 348px;
     }
 }
-@media screen and (min-width: 1200px){
-    .shell{
+
+@media screen and (min-width: 1200px) {
+    .shell {
         min-height: 400px;
     }
 }
@@ -268,10 +374,12 @@ div.Home {
     font-family: 'monospace', sans-serif;
     font-weight: bolder;
 }
-.shell h1{
+
+.shell h1 {
     margin: 0;
     text-align: left;
 }
+
 span.cl {
     color: white;
 }
@@ -294,19 +402,22 @@ a.typewrite:hover {
     cursor: default;
     text-decoration: none;
 }
-.aboutme{
+
+.aboutme {
     padding: 0;
 }
-.me-image{
+
+.me-image {
     position: relative;
     overflow: hidden;
     flex: 0 0 45%;
     border-top-left-radius: 5em;
     border-bottom-right-radius: 0;
 }
+
 .me-image img {
     max-width: 100%;
-	transform: none;
+    transform: none;
     position: relative;
     top: -5vh;
 }
@@ -319,6 +430,7 @@ div.about {
     margin: -15vh auto 0;
     z-index: 1;
 }
+
 div.about > p {
     text-align: justify;
     word-wrap: break-word;
@@ -328,38 +440,47 @@ div.about > p {
 div.about > p > span {
     font-weight: bold;
 }
-@media screen and (min-width: 768px){
+
+@media screen and (min-width: 768px) {
     .me-image img {
         top: -10vh;
     }
+
     div.about {
         margin: -20vh auto 0;
     }
 }
-@media screen and (min-width: 992px){
-    .me-image{
 
-    border-bottom-right-radius: 5em;
+@media screen and (min-width: 992px) {
+    .me-image {
+
+        border-bottom-right-radius: 5em;
     }
+
     .me-image img {
         top: 0;
         transform: scale(1.1, 1.1);
     }
+
     div.about {
         padding: 0 0 0 2rem;
         border-radius: 1em;
         margin: 0;
     }
 }
+
 @media screen and (max-width: 991.98px) {
     .img-container2 {
         background-color: transparent;
     }
 }
-.skill-jumbotron{
+
+.skill-jumbotron {
     background-color: transparent;
     padding-top: 0;
-}.skill-container{
+}
+
+.skill-container {
     padding: 0;
 }
 
@@ -369,17 +490,20 @@ div.about > p > span {
     animation-timing-function: ease-in-out;
     position: relative;
 }
+
 @media screen and (min-width: 314px) {
 
-    .skills{
+    .skills {
         height: 2em;
     }
 }
+
 @media screen and (min-width: 576px) {
-    .skills{
+    .skills {
         height: 3em;
     }
 }
+
 @media screen and (min-width: 720px) {
     .skills {
         height: 5em;
@@ -464,9 +588,11 @@ div.about > p > span {
     height: 150px;
     text-align: center;
 }
-.project-group h2{
+
+.project-group h2 {
     margin-top: 0;
 }
+
 .card-group {
     margin: -180px 0 100px;
     display: none;
@@ -475,14 +601,17 @@ div.about > p > span {
 .carousel {
     margin: -81px 0 50px;
 }
+
 @media screen and (min-width: 576px) {
     .project-group {
         height: 300px;
     }
+
     .carousel {
         margin: -195px 0 50px;
     }
 }
+
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
     display: flex;
 }
@@ -537,14 +666,17 @@ div.about > p > span {
     display: flex;
     align-items: center;
 }
+
 .card-body {
     padding: 1rem;
 }
+
 @media screen and (min-width: 448px) {
-    .card-body{
+    .card-body {
         padding: 1.25rem;
     }
 }
+
 .card-overlay.bottom {
     bottom: 100%;
 }
@@ -624,3 +756,31 @@ div.about > p > span {
 }
 
 /*contact end*/
+
+/*footer start*/
+#go-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    transition: bottom 500ms ease-in-out, opacity 500ms ease-in-out;
+    opacity: 0.7;
+}
+
+#go-top a {
+    color: #d5be51;
+    font-weight: bold;
+    background-color: #f3efde;
+    border-radius: 1em;
+    width: 2rem;
+    display: block;
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+
+#go-top:hover {
+    bottom: 1.5rem;
+    opacity: 1;
+}
+
+/*footer end*/

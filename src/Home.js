@@ -83,7 +83,6 @@ function Home() {
     });
   return (
       <div className="Home d-flex flex-column justify-content-center">
-          <a name="home"/>
           <Container fluid className="shell">
               <h1><span className="cl"><span className="green">priska</span>:<span className="blue">~</span>$ </span>
                   <a href="/" className="typewrite" data-period="2000"

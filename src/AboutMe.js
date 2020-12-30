@@ -21,7 +21,6 @@ import {Button, Col, Container, Image, Jumbotron, Row} from 'react-bootstrap';
 function AboutMe() {
     return (
         <div className="AboutMe">
-            <a name="about"/>
             {/*<Container className="d-flex justify-content-center align-items-center aboutme-header">*/}
             {/*    */}
             {/*</Container>*/}
