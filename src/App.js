@@ -1,8 +1,7 @@
 import logo from './images/logo.png';
 import './App.css';
 import React from 'react'
-import {Button, Nav, Navbar, Jumbotron} from 'react-bootstrap';
-import {BrowserRouter, Link, Route} from 'react-router-dom'
+import {Nav, Navbar} from 'react-bootstrap';
 import Home from './Home.js'
 import Projects from './Projects.js'
 import AboutMe from './AboutMe.js'
@@ -11,7 +10,6 @@ import Contact from './Contact.js'
 
 function App() {
     return (
-        <BrowserRouter>
             <div className="App">
 
                 <a name="home"/>
@@ -38,8 +36,6 @@ function App() {
                     </div>
                 </div>
 
-                {/*Set up the Router*/}
-
                 <Home/>
                 <a name="about"/>
                 <AboutMe/>
@@ -65,7 +61,6 @@ function App() {
                     </div>
                 </footer>
             </div>
-        </BrowserRouter>
     );
 }
 
