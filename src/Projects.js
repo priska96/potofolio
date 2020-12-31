@@ -7,9 +7,87 @@ import pscoreedu from './images/pscoreedu_small.png';
 import munscr from './images/munscr_small.png';
 import twotickets from './images/twotickets_small.png';
 import './App.css';
-import React from 'react'
+import React from 'react';
+import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import {Button, ButtonGroup, Card, CardGroup, Carousel, Container, Jumbotron} from 'react-bootstrap';
+import {Button, ButtonGroup, Card, CardGroup, Carousel, Container, Jumbotron, Modal} from 'react-bootstrap';
+import ProjectDetail from "./ProjectDetail";
+
+
+
+
+const dataDetail = {
+        nutritionplanner: {
+            img: nutritionplanner,
+            cardTitle: "Mealplan Generator",
+            cardText: "The goal of my Bachelor's Thesis was to create a system to generate meal plans. The " +
+                "focus was set on the logic and not on the design, which is why the page has only minimal " +
+                "styling to make it usable. Besides Django (Python) jQuery, CSS and Bootstrap was used to " +
+                "implement this website.",
+            cardAbstract: "Development and Evaluation of a System for automatic Generation of personalised " +
+                "meal plans: Healthy nutrition is nowadays a highly valued topic. Meal plans are often used to " +
+                "structure the food intake. The goal of this work is to develop and evaluate an algorithm to " +
+                "recommend personalised meal plans. These meal plans support typical diets and eating habits " +
+                "and provides a suitable nutrition intake. To create the meal plans and to choose the right " +
+                "foods in a healthy measurement, an optimization problem will be set up and will be solved by " +
+                "linear programming. Furthermore, a web service is set up and using the algorithm to generate, " +
+                "based on the users input, these individual meal plans and to output them in a calendar " +
+                "overview. Besides, a JSON structure will be introduced to simplify the integration of this " +
+                "web service into other apps, by sending the data per HTTP requests.",
+
+        },
+        jabe: {
+            img: jabe,
+            cardTitle: "JABE",
+            cardText: "A plain HTML, CSS and jQuery restaurant website (build from scratch).",
+            buttonWebsite: 'https://jaberestaurant.de',
+            buttonCode: 'https://github.com/priska96/jaberestaurant'
+        },
+        poilei: {
+                img: poilei,
+                cardTitle: "Poilei",
+                cardText: "A Shopify online shop that sells Italian shoes (maintaining).",
+                buttonWebsite: 'https://poilei.com',
+                buttonCode: ''
+            },
+        glowingkids: {
+                img: glowingkids,
+                cardTitle: "GlowingKids",
+                cardText: "A Shopify online shop that sells clothes for children (maintaining).",
+                buttonWebsite: 'https://glowingkids.de',
+                buttonCode: ''
+        },
+        pscore: {
+                img: pscore,
+                cardTitle: "PSCORE",
+                cardText: "A WordPress website about human rights in North Korea and North Korean defectors (maintaining).",
+                buttonWebsite: 'http://pscore.org/home',
+                buttonCode: ''
+        },
+        pscoreedu: {
+                img: pscoreedu,
+                cardTitle: "PSCORE EDU",
+                cardText: "A WordPress website to provide tutoring classes for North Korean defectors (maintaining).",
+                buttonWebsite: 'http://edu.pscore.org/en/',
+                buttonCode: ''
+            },
+    munscr: {
+            img: munscr,
+            cardTitle: "MUNSCR",
+            cardText: "A WordPress website about a Model United Nations about successful Korean reunification (build from scratch).",
+            buttonWebsite: 'http://munscr.com',
+            buttonCode: ''
+
+        },
+    twotickets: {
+        img: twotickets,
+        cardTitle: "TwoTickets.de",
+        cardText: "A Django website, that sells memberships to its users. Members can win " +
+            "a pair of tickets for various events (maintaining).",
+        buttonWebsite: 'https://twotickets.de',
+        buttonCode: ''
+    }
+};
 
 class Project extends React.Component {
     constructor(props) {
@@ -17,9 +95,15 @@ class Project extends React.Component {
         this.cardsGroup = props.cardsGroup;
         this.cards = props.cards;
         this.viewDetail = this.viewDetail.bind(this);
+        this.state = {
+            show: false
+        }
     }
-    viewDetail(){
 
+    viewDetail(cardName){
+        this.setState({show: true})
+        // let show = true;
+        // return new ProjectDetail({show:show, card:cardName})
     }
     render() {
         let controls = false;
@@ -28,8 +112,11 @@ class Project extends React.Component {
             controls = true;
             indicators = true;
         }
+        let show = this.state.show;
         return (
+
             <React.Fragment>
+
                 <Jumbotron className="project-group">
                     <h2>{this.cardsGroup}</h2>
                 </Jumbotron>
@@ -47,8 +134,8 @@ class Project extends React.Component {
                                         {card.buttonCode ?
                                             <Button variant="loading"
                                                     href={card.buttonCode} target="_blank">View Code</Button> : null}
-                                            {/*<Button variant="loading"*/}
-                                            {/*        onClick={this.viewDetail}>View Details</Button>*/}
+                                            <Button variant="loading"
+                                                    onClick={this.viewDetail}>View Details</Button>
                                     </ButtonGroup>
                                 </Card.Body>
                             </div>
@@ -57,7 +144,7 @@ class Project extends React.Component {
                 </CardGroup>
                 <Carousel className="hidden-md" controls={controls} indicators={indicators}>
                     {this.cards.map((card, i) => (
-                    <Carousel.Item as={Card}>
+                    <Carousel.Item key={i} as={Card}>
                         <Card.Img variant="top" src={card.img}/>
                         <div className="card-overlay bottom">
                             <Card.Body>
@@ -69,11 +156,23 @@ class Project extends React.Component {
                                     {card.buttonCode ?
                                         <Button variant="loading"
                                                 href={card.buttonCode} target="_blank">View Code</Button> : null}
-                                        {/*<Button variant="loading"*/}
-                                        {/*        onClick={this.viewDetail}>View Details</Button>*/}
+                                        <Button variant="loading"
+                                                onClick={this.viewDetail}>View Details</Button>
                                 </ButtonGroup>
                             </Card.Body>
                         </div>
+                        <ProjectDetail show={show} card={card.name}/>
+                        {/*<Modal show={show}>*/}
+                        {/*    <Modal.Header closeButton>*/}
+                        {/*      <Modal.Title>{dataDetail['nutritionplanner'].cardTitle}</Modal.Title>*/}
+                        {/*    </Modal.Header>*/}
+                        {/*    <Modal.Body><p>{dataDetail['nutritionplanner'].cardText}</p></Modal.Body>*/}
+                        {/*    <Modal.Footer>*/}
+                        {/*      <Button variant="secondary">*/}
+                        {/*        Close*/}
+                        {/*      </Button>*/}
+                        {/*    </Modal.Footer>*/}
+                        {/*  </Modal>*/}
                     </Carousel.Item>)
                     )}
                 </Carousel>
@@ -99,8 +198,9 @@ const data = {
             {
                 cardsGroup: 'Bachelor Thesis',
                 cards: [{
+                    name: "nutritionplanner",
                     img: nutritionplanner,
-                    cardTitle: "Mealplan Generator",
+                    cardTitle: "Meal plan Generator",
                     cardText: "A Django website that automatically generates user-specific weekly meal plans (build from scratch).",
                     buttonWebsite: '',
                     buttonCode: 'https://github.com/priska96/nutritionplanner'
@@ -108,6 +208,7 @@ const data = {
             }, {
                 cardsGroup: 'Freelance Projects',
                 cards: [{
+                    name: "jabe",
                     img: jabe,
                     cardTitle: "JABE",
                     cardText: "A plain HTML, CSS and jQuery restaurant website (build from scratch).",
@@ -115,6 +216,7 @@ const data = {
                     buttonCode: 'https://github.com/priska96/jaberestaurant'
                 },
                     {
+                        name: "poilei",
                         img: poilei,
                         cardTitle: "Poilei",
                         cardText: "A Shopify online shop that sells Italian shoes (maintaining).",
@@ -122,6 +224,7 @@ const data = {
                         buttonCode: ''
                     },
                     {
+                        name: "glowingkids",
                         img: glowingkids,
                         cardTitle: "GlowingKids",
                         cardText: "A Shopify online shop that sells clothes for children (maintaining).",
@@ -131,6 +234,7 @@ const data = {
             }, {
                 cardsGroup: 'Internship at PSCORE',
                 cards: [{
+                    name: "pscore",
                     img: pscore,
                     cardTitle: "PSCORE",
                     cardText: "A WordPress website about human rights in North Korea and North Korean defectors (maintaining).",
@@ -138,6 +242,7 @@ const data = {
                     buttonCode: ''
                 },
                     {
+                        name: "pscoreedu",
                         img: pscoreedu,
                         cardTitle: "PSCORE EDU",
                         cardText: "A WordPress website to provide tutoring classes for North Korean defectors (maintaining).",
@@ -145,6 +250,7 @@ const data = {
                         buttonCode: ''
                     },
                     {
+                        name: "munscr",
                         img: munscr,
                         cardTitle: "MUNSCR",
                         cardText: "A WordPress website about a Model United Nations about successful Korean reunification (build from scratch).",
@@ -155,6 +261,7 @@ const data = {
             , {
                 cardsGroup: 'TwoTicktes.de GmbH',
                 cards: [{
+                    name: "twotickets",
                     img: twotickets,
                     cardTitle: "TwoTickets.de",
                     cardText: "A Django website, that sells memberships to its users. Members can win " +
@@ -178,11 +285,9 @@ function Projects() {
                 {/*<Container className="d-flex justify-content-center align-items-center aboutme-header">*/}
                 {/*    */}
                 {/*</Container>*/}
-                {data.content.body.map(props => <Project
-                    cardsGroup={props.cardsGroup}
-                    cards={props.cards}/>
-                )
-                }
+                {data.content.body.map((props, i) =>
+                    <Project key={i} cardsGroup={props.cardsGroup} cards={props.cards}/>
+                )}
             </Jumbotron>
         </div>
     );

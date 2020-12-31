@@ -51,11 +51,12 @@ function App() {
                 </div>
                 <a className="anchor" name="home"/>
                 <Home/>
-                <a className="anchor"  name="about"/>
+                <a className="anchor" name="about"/>
                 <AboutMe/>
-                <a className="anchor"  name="projects"/>
+                <a className="anchor" name="projects"/>
                 <Projects/>
-                <a className="anchor"  name="contact"/>
+                <div id="project-details"/>
+                <a className="anchor" name="contact"/>
                 <Contact/>
                 <footer>
                     <div id="go-top">
