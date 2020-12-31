@@ -173,15 +173,17 @@ function Projects() {
 
     return (
         <div className="Projects">
-            <h1>My Projects</h1>
-            {/*<Container className="d-flex justify-content-center align-items-center aboutme-header">*/}
-            {/*    */}
-            {/*</Container>*/}
-            {data.content.body.map(props => <Project
-                cardsGroup={props.cardsGroup}
-                cards={props.cards}/>
-            )
-            }
+            <Jumbotron className="px-0 bg-transparent">
+                <h1>My Projects</h1>
+                {/*<Container className="d-flex justify-content-center align-items-center aboutme-header">*/}
+                {/*    */}
+                {/*</Container>*/}
+                {data.content.body.map(props => <Project
+                    cardsGroup={props.cardsGroup}
+                    cards={props.cards}/>
+                )
+                }
+            </Jumbotron>
         </div>
     );
 }

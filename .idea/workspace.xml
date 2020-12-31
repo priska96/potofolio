@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/src/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AboutMe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projects.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +95,7 @@
       <workItem from="1609088700814" duration="2210000" />
       <workItem from="1609195720718" duration="24731000" />
       <workItem from="1609249631266" duration="3334000" />
-      <workItem from="1609279341498" duration="15463000" />
+      <workItem from="1609279341498" duration="22268000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1608551568345</created>
@@ -141,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609218388026</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refining">
+      <created>1609297343597</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609297343597</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refining">
+      <created>1609297415478</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609297415478</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

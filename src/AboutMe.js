@@ -34,13 +34,11 @@ function AboutMe() {
                     <div className="about">
                         <p>
                             <span>I'm a Berlin based full-stack Web Developer, building easy to use and user-centric webpages.</span><br/>
-                            Since 2017 I work as a Django developer for TwoTickets.de in Berlin, Germany, which is where
-                            my
-                            passion for design and development has its roots. Wandering between logical back-end
-                            problems and creativity
-                            needing front-end issues brings me joy and keeps me at ease. I love visuals and animations,
-                            what perhaps comes from my hobbies being drawing and painting.<br/>
-                            Taking first steps in freelance works paved me the way to experience Shopify and WordPress,
+                            Since 2017 I am working as a Django developer for TwoTickets.de in Berlin, Germany, which is where
+                            my passion for design and development have their roots. I enjoy wandering between logical back-end
+                            problems and creativity needing front-end issues. I love visuals and animations,
+                            which originates probably in my hobbies being drawing and painting.<br/>
+                            Having taken my first steps in freelance works paved me the way to experience Shopify and WordPress,
                             which
                             are fun to use, if you want something neat and quick. But building everything from scratch
                             and

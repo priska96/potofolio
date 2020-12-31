@@ -176,11 +176,16 @@ small, .text_small {
     background-position: 100%;
 
 }
-
+.anchor{
+    position: relative;
+    top: -100px;
+}
 .bg-beige {
     background-color: #f3efde;
 }
-
+.bg-transparent{
+    background-color: transparent;
+}
 @media screen and (min-width: 768px) {
     .w-md-75 {
         width: 75% !important;
@@ -267,7 +272,9 @@ nav.navbar {
 div.Home {
     background: url("./images/jukan-tateisi-bJhT_8nbUA0-unsplash.jpg");
     background-size: cover;
+    background-position-x: right;
     height: calc(100vh - 100px);
+    min-height: 550px;
 }
 
 @keyframes pop-in {

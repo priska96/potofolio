@@ -1,6 +1,6 @@
 import logo from './images/logo.png';
 import './App.css';
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Nav, Navbar} from 'react-bootstrap';
 import Home from './Home.js'
 import Projects from './Projects.js'
@@ -9,10 +9,24 @@ import Contact from './Contact.js'
 
 
 function App() {
+    /*let closeMenu = function (e){
+        if(e.target.closest('.navbar-toggler')){
+            return false;
+        }
+        let menu = document.getElementById('basic-navbar-nav')
+        if(menu.classList.contains('show')){
+            menu.classList.remove('show')
+        }
+    }
+    useEffect(() => {
+        window.onload = function() {
+            document.addEventListener('click',closeMenu)
+        }
+    });*/
     return (
             <div className="App">
 
-                <a name="home"/>
+
                 <div className="navigation">
                     <div className="navigation-sub">
                         <Navbar bg="light" expand="md" fixed="top" className="bg-light justify-content-end pr-0">
@@ -35,13 +49,13 @@ function App() {
                         </Navbar>
                     </div>
                 </div>
-
+                <a className="anchor" name="home"/>
                 <Home/>
-                <a name="about"/>
+                <a className="anchor"  name="about"/>
                 <AboutMe/>
-                <a name="projects"/>
+                <a className="anchor"  name="projects"/>
                 <Projects/>
-                <a name="contact"/>
+                <a className="anchor"  name="contact"/>
                 <Contact/>
                 <footer>
                     <div id="go-top">
