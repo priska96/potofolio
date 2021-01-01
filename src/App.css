@@ -27,7 +27,7 @@ p:first-of-type:not(.card-text):not(.contact-text) {
 h1, h2, h3, h4, h5 {
     margin: 3rem 0 2.38rem;
     font-family: 'Playfair Display', serif;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 1.3;
     text-align: center;
 }
@@ -174,7 +174,10 @@ small, .text_small {
 .btn-loading:hover {
     color: whitesmoke;
     background-position: 100%;
-
+}
+.btn-back{
+    color: rgba(0,0,0, 0.5);
+    border: none;
 }
 .anchor{
     position: relative;
@@ -185,6 +188,47 @@ small, .text_small {
 }
 .bg-transparent{
     background-color: transparent;
+}
+.image-box{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 50%;
+}
+.image-box .me-image{
+    flex-grow: 1;
+    max-height: 20vh;
+    transition: transform 500ms ease-in-out;
+}
+.image-box .me-image:hover{
+    flex-grow: 1;
+    max-height: 20vh;
+    transform: scale(1.5,1.5);
+    z-index: 1051;
+    cursor: pointer;
+}
+.lightbox .modal-body img {
+    max-width: 100%;
+}
+.modal-page{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: white;
+    padding: 0;
+}
+.modal-page .modal-dialog{
+    margin: 0;
+    max-width: 100vw;
+}
+.modal-page .modal-dialog .modal-content{
+    border: none;
+}
+
+.modal-page .me-image img{
+    top: 0;
+    transform: none;
+}
+.modal-page .me-image video{
+    max-width: 100%;
 }
 @media screen and (min-width: 768px) {
     .w-md-75 {
@@ -693,7 +737,26 @@ div.about > p > span {
     left: 10%;
 }
 
-
+.overlay-text{
+    position: absolute;
+    height: 100%;
+    z-index: 1053;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+.overlay-text:hover{
+    opacity: 1;
+}
+.overlay-text span{
+    color: white;
+    text-align: center;
+}
 @media screen and (min-width: 576px) {
     .carousel-inner {
         width: 75%;
