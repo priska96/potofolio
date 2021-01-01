@@ -200,7 +200,7 @@ const data = {
                 cards: [{
                     name: "nutritionplanner",
                     img: nutritionplanner,
-                    cardTitle: "Meal plan Generator",
+                    cardTitle: "Meal Plan Generator",
                     cardText: "A Django website that automatically generates user-specific weekly meal plans (build from scratch).",
                     buttonWebsite: '',
                     buttonCode: 'https://github.com/priska96/nutritionplanner'

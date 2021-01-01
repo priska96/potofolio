@@ -172,13 +172,14 @@ class ProjectDetail extends React.Component {
             <Modal show={this.state.show} onHide={this.handleClose} className="modal-page">
                 <div className="text-right">
                     <Button variant="back" onClick={this.handleClose}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                             className="bi bi-chevron-double-left" viewBox="0 0 18 18">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             className="bi bi-chevron-double-left" viewBox="0 0 20 20">
                             <path fillRule="evenodd"
                                   d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                             <path fillRule="evenodd"
                                   d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                         </svg>
+                        Back
                     </Button>
                 </div>
                 <Jumbotron className="img-container2 bg-beige">

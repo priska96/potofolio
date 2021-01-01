@@ -192,17 +192,17 @@ small, .text_small {
 .image-box{
     display: flex;
     flex-wrap: wrap;
-    flex: 0 0 50%;
+    flex: 0 0 70%;
 }
 .image-box .me-image{
     flex-grow: 1;
     max-height: 20vh;
-    transition: transform 500ms ease-in-out;
+    transition: transform 800ms ease-in-out;
 }
 .image-box .me-image:hover{
     flex-grow: 1;
     max-height: 20vh;
-    transform: scale(1.5,1.5);
+    transform: scale(1.2,1.2);
     z-index: 1051;
     cursor: pointer;
 }
