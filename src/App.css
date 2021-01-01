@@ -209,6 +209,9 @@ small, .text_small {
 .lightbox .modal-body img {
     max-width: 100%;
 }
+.lightbox .modal-dialog {
+    max-width: 60vw;
+}
 .modal-page{
     width: 100vw;
     min-height: 100vh;

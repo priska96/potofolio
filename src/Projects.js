@@ -19,7 +19,7 @@ import ProjectDetail from "./ProjectDetail";
 const dataDetail = {
         nutritionplanner: {
             img: nutritionplanner,
-            cardTitle: "Mealplan Generator",
+            cardTitle: "Meal Plan Generator",
             cardText: "The goal of my Bachelor's Thesis was to create a system to generate meal plans. The " +
                 "focus was set on the logic and not on the design, which is why the page has only minimal " +
                 "styling to make it usable. Besides Django (Python) jQuery, CSS and Bootstrap was used to " +

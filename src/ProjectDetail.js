@@ -20,7 +20,7 @@ import me3 from "./images/me.png";
 const data = {
         nutritionplanner: {
             vid: nutritionplanner,
-            cardTitle: "Meal plan Generator",
+            cardTitle: "Meal Plan Generator",
             cardText: "The goal of this project was to create an algorithm to generate personalised meal plans, " +
                 "based on the users' input and to output them in a calendar overview. These meal plans support typical " +
                 "diets and eating habits  and provide a suitable nutrition intake. To create the meal plans and to " +
@@ -76,7 +76,9 @@ const data = {
     munscr: {
             img: munscr,
             cardTitle: "MUNSCR",
-            cardText: "A WordPress website about a Model United Nations about successful Korean reunification (build from scratch).",
+            cardText: "MUNSCR stands for Model United Nations for Succesful Corean Reunification. It is the newest " +
+                "project between PSCORE and me. It is a WordPress website that I designed and developed from scratch. " +
+                "The website is under development and is set to be finished around end of January.",
             buttonWebsite: 'http://munscr.com',
             buttonCode: ''
 
