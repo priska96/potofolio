@@ -182,14 +182,14 @@ class ProjectDetail extends React.Component {
                         Back
                     </Button>
                 </div>
-                <Jumbotron className="img-container2 bg-beige">
+                <Jumbotron className="img-container2 bg-transparent">
                   <h1>{data[this.card].cardTitle}</h1>
                 <Container
                     className="d-flex flex-lg-row flex-column justify-content-lg-start align-items-lg-center justify-content-center align-items-start aboutme">
                         {media !== 'imgs'? <div className="me-image">{media}</div> :
                             <div className="image-box">
                                 {data[this.card].imgs.map((s, i) =>
-                                    <div className="me-image" onClick={() => this.viewLightbox(s)}>
+                                    <div className="project-img" onClick={() => this.viewLightbox(s)}>
                                         <Image src={s} key={i}/>
                                         <div className="overlay-text"><span>Click to enlarge</span></div>
                                     </div>
@@ -197,7 +197,7 @@ class ProjectDetail extends React.Component {
                             </div>
                         }
 
-                    <div className="about">
+                    <div className="project-desc">
                         <p>{data[this.card].cardText}
                         </p>
                     </div>
