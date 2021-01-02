@@ -101,9 +101,7 @@ const data = {
             "of bug fixing and adding new features. My main projects were a redesign of landing and event pages, " +
             "optimizing the filter and search functions, a redesign of the iFrame version for an affiliate " +
             "company (Vattenfall) and a current tech-stack update project. " +
-            "" +
-            "A Django website, that sells memberships to its users. Members can win " +
-            "a pair of tickets for various events (maintaining).",
+            "This website is build with Django in the back-end and Sass and jQuery in the front-end." ,
         buttonAffiliate: 'https://vattenfall.de/freikarten',
     }
 };
@@ -128,13 +126,20 @@ class LightboxWrapper extends React.Component {
     render() {
         const {srcIndex, isOpen} = this.state;
         const images = data[this.card].imgs;
+        let next;
+        let prev;
+
+        if(images.length > 1){
+            next = images[(srcIndex + 1) % images.length]
+            prev = images[(srcIndex + images.length - 1) % images.length]
+        }
         return (
             <div>
                 {isOpen && (
                     <Lightbox
                         mainSrc={images[srcIndex]}
-                        nextSrc={images[(srcIndex + 1) % images.length]}
-                        prevSrc={images[(srcIndex + images.length - 1) % images.length]}
+                        nextSrc={next}
+                        prevSrc={prev}
                         onCloseRequest={() => this.props.closeAction()}
                         onMovePrevRequest={() =>
                             this.setState({

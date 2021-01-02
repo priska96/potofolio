@@ -591,10 +591,18 @@ div.about > p > span {
 }
 
 .skills {
+    display: block;
+    animation-fill-mode: forwards;
     height: 1.5em;
     flex-grow: 1;
-    animation-timing-function: ease-in-out;
+    opacity: 0;
+    /*animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
     position: relative;
+    left: 101vw;*/
+}
+.skills.animated{
+    opacity: 1;
 }
 
 @media screen and (min-width: 314px) {
@@ -619,41 +627,42 @@ div.about > p > span {
 .skills.left {
     animation: move-in-left 8s infinite;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .skills.right {
-    animation: move-in-right 8s infinite;
+    animation: move-in-right 8s 1;
     animation-timing-function: ease-out;
 }
 
 @keyframes move-in-left {
     0% {
-        transform: rotate(0deg);
-        left: 101vw;
-    }
-    25% {
         transform: rotate(270deg);
         left: 101vw;
     }
+    25% {
+        transform: rotate(220deg);
+        left: 75vw;
+    }
     50% {
         transform: rotate(0deg);
-        left: 0px;
+        left: 50vw;
     }
     55% {
         transform: rotate(0deg);
-        left: 0px;
+        left: 45vw;
     }
     70% {
         transform: rotate(0deg);
-        left: 0px;
+        left: 30vw;
     }
-    70% {
-        transform: rotate(-30deg);
-        left: 0px;
+    90% {
+        transform: rotate(0deg);
+        left: 10vw;
     }
     100% {
         transform: rotate(0deg);
-        left: 101vw;
+        left: 0;
     }
 }
 

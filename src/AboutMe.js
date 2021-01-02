@@ -14,11 +14,33 @@ import me2 from './images/IMG_63873.png';
 
 import me3 from './images/me.png';
 import './App.css';
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Button, Col, Container, Image, Jumbotron, Row} from 'react-bootstrap';
+
+var observer = new IntersectionObserver(function(entries) {
+	// isIntersecting is true when element and viewport are overlapping
+	// isIntersecting is false when element and viewport don't overlap
+	// since there is a single target to be observed, there will be only one entry
+	if(entries[0]['isIntersecting'] === true) {
+		if(entries[0]['intersectionRatio'] > 0.6) {
+            let skills = document.getElementsByClassName('skills')
+            Array.from(skills).forEach((skill) => {
+               skill.classList.add('animate__zoomInUp');
+               skill.classList.add('animated');
+            })
+        }
+	}
+}, { threshold: [0.6] });
+
+
+
+
 
 
 function AboutMe() {
+    useEffect(() => {
+        observer.observe(document.querySelector("#skillset"));
+    })
     return (
         <div className="AboutMe">
             {/*<Container className="d-flex justify-content-center align-items-center aboutme-header">*/}
@@ -50,24 +72,24 @@ function AboutMe() {
                     </div>
                 </Container>
             </Jumbotron>
-            <Jumbotron className="skill-jumbotron">
+            <Jumbotron id="skillset" className="skill-jumbotron">
                 <h2>Skills</h2>
                 <Container className="skill-container">
                     <Row className="p-3">
-                        <Image src={html} className="skills left"/>
-                        <Image src={css} className="skills left"/>
-                        <Image src={javascript} className="skills right"/>
+                        <Image src={html} className="skills animate__animated"/>
+                        <Image src={css} className="skills animate__animated"/>
+                        <Image src={javascript} className="skills animate__animated"/>
                     </Row>
                     <Row className="px-3">
-                        <Image src={sass} className="skills right"/>
-                        <Image src={bootstrap} className="skills left"/>
-                        <Image src={jquery} className="skills right"/>
+                        <Image src={sass} className="skills animate__animated"/>
+                        <Image src={bootstrap} className="skills animate__animated"/>
+                        <Image src={jquery} className="skills animate__animated"/>
                     </Row>
                     <Row className="p-3">
-                        <Image src={react} className="skills left"/>
-                        <Image src={django} className="skills right"/>
-                        <Image src={python} className="skills left"/>
-                        <Image src={wordpress} className="skills right"/>
+                        <Image src={react} className="skills animate__animated"/>
+                        <Image src={django} className="skills animate__animated"/>
+                        <Image src={python} className="skills animate__animated"/>
+                        <Image src={wordpress} className="skills animate__animated"/>
                     </Row>
                 </Container>
                 </Jumbotron>
