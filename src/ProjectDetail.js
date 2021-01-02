@@ -38,7 +38,7 @@ const data = {
             "Besides Django (Python) jQuery, CSS and Bootstrap  were used to  implement this website."
     },
     jabe: {
-        img: jabe,
+        imgs: [jabe],
         cardTitle: "JABE",
         cardText: "The JABE is a Japanese restaurant I created the website for and maintained for some time. " +
             "This eight month project is a static and plain HTML, CSS and jQuery website. It is solely used to " +
@@ -46,16 +46,16 @@ const data = {
             "the Facebook tracking pixel for marketing services.",
     },
     poilei: {
-        img: poilei_cookies,
+        imgs: [poilei_cookies],
         cardTitle: "Poilei",
-        cardText: "Poilei is an Italian shoe shop using Shopify. Since I only maintain the page I mostly fix " +
+        cardText: "Poilei is an Italian shoe shop using Shopify. Since I maintain the page I mostly fix " +
             "minor errors in the front-end and edit the layout for the pages as well as integrate tracking " +
             "pixels like like the ones from Google or Facebook and added a cookies banner.",
         buttonWebsite: 'https://poilei.com',
         buttonCode: ''
     },
     glowingkids: {
-        img: glowingkids,
+        imgs: [glowingkids],
         cardTitle: "GlowingKids",
         cardText: "GlowingKids is a Shopify online shop selling children clothing. I maintain the front-end and " +
             "adjust layouts of the pages. Besides I wrote a Python script to update the product database " +
@@ -83,7 +83,7 @@ const data = {
         buttonCode: 'https://github.com/priska96/pscore/blob/master/member_registration_date.php'
     },
     munscr: {
-        img: munscr,
+        imgs: [munscr],
         cardTitle: "MUNSCR",
         cardText: "MUNSCR stands for Model United Nations for Succesful Corean Reunification. It is the newest " +
             "project between PSCORE and me. It is a WordPress website that I designed and developed from scratch. " +
@@ -109,50 +109,50 @@ const data = {
 };
 
 
-
-
-
 class LightboxWrapper extends React.Component {
-  constructor(props) {
-    super(props);
-    this.card = props.card;
-    this.closeAction = props.closeAction;
-    this.state = {
-      srcIndex: props.srcIndex,
-      isOpen: props.isOpen,
-        card: props.card,
-    };
-  }
-    componentWillReceiveProps(nextProps) {
-        this.setState({isOpen: nextProps.isOpen,srcIndex: nextProps.srcIndex, card: nextProps.card});
+    constructor(props) {
+        super(props);
+        this.card = props.card;
+        this.closeAction = props.closeAction;
+        this.state = {
+            srcIndex: props.srcIndex,
+            isOpen: props.isOpen,
+            card: props.card,
+        };
     }
-  render() {
-    const { srcIndex, isOpen } = this.state;
-    const images = data[this.card].imgs;
-    return (
-      <div>
-        {isOpen && (
-          <Lightbox
-            mainSrc={images[srcIndex]}
-            nextSrc={images[(srcIndex + 1) % images.length]}
-            prevSrc={images[(srcIndex + images.length - 1) % images.length]}
-            onCloseRequest={() => this.props.closeAction()}
-            onMovePrevRequest={() =>
-              this.setState({
-                srcIndex: (srcIndex + images.length - 1) % images.length
-              })
-            }
-            onMoveNextRequest={() =>
-              this.setState({
-                srcIndex: (srcIndex + 1) % images.length
-              })
-            }
-          />
-        )}
-      </div>
-    );
-  }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({isOpen: nextProps.isOpen, srcIndex: nextProps.srcIndex, card: nextProps.card});
+    }
+
+    render() {
+        const {srcIndex, isOpen} = this.state;
+        const images = data[this.card].imgs;
+        return (
+            <div>
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={images[srcIndex]}
+                        nextSrc={images[(srcIndex + 1) % images.length]}
+                        prevSrc={images[(srcIndex + images.length - 1) % images.length]}
+                        onCloseRequest={() => this.props.closeAction()}
+                        onMovePrevRequest={() =>
+                            this.setState({
+                                srcIndex: (srcIndex + images.length - 1) % images.length
+                            })
+                        }
+                        onMoveNextRequest={() =>
+                            this.setState({
+                                srcIndex: (srcIndex + 1) % images.length
+                            })
+                        }
+                    />
+                )}
+            </div>
+        );
+    }
 }
+
 LightboxWrapper.propTypes = {
     isOpen: PropTypes.bool,
     srcIndex: PropTypes.number,
@@ -202,82 +202,72 @@ class ProjectDetail extends React.Component {
         if (!(this.state.card in data)) {
             return null
         }
-        let media;
-        if (data[this.state.card]['img']) {
-            media = <Image src={data[this.state.card].img}/>;
-        } else if (data[this.state.card]['vid']) {
-            media = <video controls>
-                <source src={data[this.state.card].vid} type="video/mp4"/>
-                Your browser does not support the video tag.</video>;
-        } else {
-            media = 'imgs'
-        }
         return (
             <React.Fragment>
-                            <Modal show={this.state.show} onHide={this.handleClose} className="modal-page">
+                <Modal show={this.state.show} onHide={this.handleClose} className="modal-page">
 
-                <div className="text-right pr-3">
-                    <Button variant="back" onClick={this.props.closeAction}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                             className="bi bi-chevron-double-left" viewBox="0 0 30 30">
-                            <path fillRule="evenodd"
-                                  d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                            <path fillRule="evenodd"
-                                  d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                        </svg>
-                        Back
-                    </Button>
-                </div>
-                <Jumbotron className="img-container2 bg-transparent">
-                    <h1>{data[this.state.card].cardTitle}</h1>
-                    <Container
-                        className="d-flex flex-lg-row flex-column flex-wrap justify-content-lg-start align-items-lg-center justify-content-center align-items-start aboutme">
-                        {media !== 'imgs' ? <div className="image-box">
-                                <div className="project-img">{media}
-                                    <div className="overlay-text"><span>Click to enlarge</span></div>
+                    <div className="text-right pr-3">
+                        <Button variant="back" onClick={this.props.closeAction}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                 className="bi bi-chevron-double-left" viewBox="0 0 30 30">
+                                <path fillRule="evenodd"
+                                      d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                                <path fillRule="evenodd"
+                                      d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                            Back
+                        </Button>
+                    </div>
+                    <Jumbotron className="img-container2 bg-transparent">
+                        <h1>{data[this.state.card].cardTitle}</h1>
+                        <Container
+                            className="d-flex flex-lg-row flex-column flex-wrap justify-content-lg-start align-items-lg-center justify-content-center align-items-start aboutme">
+                            {'vid' in data[this.state.card] ? <video className="project-video" controls>
+                                    <source src={data[this.state.card].vid} type="video/mp4"/>
+                                    Your browser does not support the video tag.</video> :
+                                <div className="image-box">
+                                    {data[this.state.card].imgs.map((s, i) =>
+                                        <div className="project-img" onClick={() => this.viewLightbox(i)}>
+                                            <div className="overlay-text"><span>Click to enlarge</span></div>
+                                            <Image src={s} key={i}/>
+                                        </div>
+                                    )}
                                 </div>
-                            </div> :
-                            <div className="image-box">
-                                {data[this.state.card].imgs.map((s, i) =>
-                                    <div className="project-img" onClick={() => this.viewLightbox(i)}>
-                                        <div className="overlay-text"><span>Click to enlarge</span></div>
-                                        <Image src={s} key={i}/>
-                                    </div>
-                                )}
+                            }
+
+                            <div className="project-desc">
+                                <p>{data[this.state.card].cardText}
+                                </p>
                             </div>
-                        }
+                            {data[this.state.card].buttonCode ?
+                                <ButtonGroup className="justify-content-between"><Button variant="loading"
+                                                                                         href={data[this.state.card].buttonCode}
+                                                                                         target="_blank">View
+                                    Code</Button></ButtonGroup> : null}
+                            {data[this.state.card].buttonAffiliate ?
+                                <ButtonGroup className="justify-content-between"><Button variant="loading"
+                                                                                         href={data[this.state.card].buttonAffiliate}
+                                                                                         target="_blank">View Affiliate
+                                    Website</Button></ButtonGroup> : null}
+                        </Container>
+                    </Jumbotron>
+                    <LightboxWrapper isOpen={this.state.showLightBox} srcIndex={this.state.srcIndex}
+                                     card={this.state.card} closeAction={this.handleClose}/>
 
-                        <div className="project-desc">
-                            <p>{data[this.state.card].cardText}
-                            </p>
-                        </div>
-                        {data[this.state.card].buttonCode ?
-                            <ButtonGroup className="justify-content-between"><Button variant="loading"
-                                                                                     href={data[this.state.card].buttonCode}
-                                                                                     target="_blank">View Code</Button></ButtonGroup> : null}
-                        {data[this.state.card].buttonAffiliate ?
-                            <ButtonGroup className="justify-content-between"><Button variant="loading"
-                                                                                     href={data[this.state.card].buttonAffiliate}
-                                                                                     target="_blank">View Affiliate
-                                Website</Button></ButtonGroup> : null}
-                    </Container>
-                </Jumbotron>
-                <LightboxWrapper isOpen={this.state.showLightBox} srcIndex={this.state.srcIndex} card={this.state.card} closeAction={this.handleClose}/>
-
-                {/*<Modal.Header closeButton>*/}
-                {/*  <Card.Title>{data[this.card].cardTitle}</Card.Title>*/}
-                {/*</Modal.Header>*/}
-                {/*<Card.Img variant="top" src={data[this.card].img}/>*/}
-                {/*<Card.Body>*/}
-                {/*    <Card.Text>{data[this.card].cardText}</Card.Text>*/}
-                {/*</Card.Body>*/}
-                {/*<Modal.Footer>*/}
-                {/*  <Button variant="secondary" onClick={this.handleClose}>*/}
-                {/*    Close*/}
-                {/*  </Button>*/}
-                {/*</Modal.Footer>*/}
-        </Modal>
-        </React.Fragment>
+                    {/*<Modal.Header closeButton>*/}
+                    {/*  <Card.Title>{data[this.card].cardTitle}</Card.Title>*/}
+                    {/*</Modal.Header>*/}
+                    {/*<Card.Img variant="top" src={data[this.card].img}/>*/}
+                    {/*<Card.Body>*/}
+                    {/*    <Card.Text>{data[this.card].cardText}</Card.Text>*/}
+                    {/*</Card.Body>*/}
+                    {/*<Modal.Footer>*/}
+                    {/*  <Button variant="secondary" onClick={this.handleClose}>*/}
+                    {/*    Close*/}
+                    {/*  </Button>*/}
+                    {/*</Modal.Footer>*/}
+                </Modal>
+            </React.Fragment>
         )
     }
 }
