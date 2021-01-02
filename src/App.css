@@ -178,6 +178,15 @@ small, .text_small {
 .btn-back{
     color: rgba(0,0,0, 0.5);
     border: none;
+    position: relative;
+    left: 0;
+    transition: left 500ms ease-in-out;
+}
+.btn-back:hover{
+    left: -5px;
+}
+.btn-back svg{
+    padding: 9px 0 0;
 }
 .anchor{
     position: relative;
@@ -252,6 +261,8 @@ small, .text_small {
     border-top-left-radius: 5em;
     border-bottom-right-radius: 5em;
     background-color: #f3efde;
+    flex: 0 0 33%;
+    margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
     .w-md-75 {
