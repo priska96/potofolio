@@ -15,7 +15,7 @@ import munscr from './images/munscr_small.png';
 import twotickets from './images/twotickets_small.png';
 import twotickets_redesign from './images/twotickets_redesign.png';
 import twotickets_filter from './images/twotickets_filter.png';
-import twotickets_vattenfall_1 from './images/twotickets_vattenfall_1.png';
+import twotickets_vattenfall_4 from './images/twotickets_vattenfall_4.png';
 import './App.css';
 import React from 'react'
 import PropTypes from "prop-types";
@@ -86,19 +86,20 @@ const data = {
             cardTitle: "MUNSCR",
             cardText: "MUNSCR stands for Model United Nations for Succesful Corean Reunification. It is the newest " +
                 "project between PSCORE and me. It is a WordPress website that I designed and developed from scratch. " +
-                "The website is under development and is set to be finished around end of January.",
+                "The design was iteratively created and underwent some changes. The website is under development " +
+                "and is set to be finished around end of January.",
             buttonWebsite: 'http://munscr.com',
             buttonCode: ''
 
         },
     twotickets: {
-        imgs: [twotickets_redesign, twotickets_filter, twotickets_vattenfall_1],
+        imgs: [twotickets_redesign, twotickets_filter, twotickets_vattenfall_4],
         cardTitle: "TwoTickets.de",
         cardText: "TwoTickets.de sells memberships to its users. Registered members can win a pair of tickets for any " +
             "event, whose organizer collaborates with TwoTickets.de. I maintain the back- and the front-end in terms " +
-            "of bug fixing and adding new features. My main projects were a redesign of landingpages, optimizing the " +
-            "filter and search functions, a redesign of the iFrame version for a affiliate company (Vattenfall)," +
-            " and a current tech-stack update project. " +
+            "of bug fixing and adding new features. My main projects were a redesign of landing and event pages, " +
+            "optimizing the filter and search functions, a redesign of the iFrame version for an affiliate " +
+            "company (Vattenfall) and a current tech-stack update project. " +
             "" +
             "A Django website, that sells memberships to its users. Members can win " +
             "a pair of tickets for various events (maintaining).",

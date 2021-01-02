@@ -224,11 +224,24 @@ small, .text_small {
     z-index: 1051;
     cursor: pointer;
 }
+.lightbox{
+    background-color: rgba(0,0,0,0.5);
+}
 .lightbox .modal-body img, .image-box img {
     max-width: 100%;
 }
 .lightbox .modal-dialog {
-    max-width: 60vw;
+    margin-top: 25vh;
+    max-width: 95vw;
+}
+@media screen and (min-width: 992px) {
+  .lightbox .modal-dialog {
+        max-width: 60vw;
+    }
+}
+
+.lightbox .modal-header{
+    padding: 0;
 }
 .modal-page{
     width: 100vw;
