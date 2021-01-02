@@ -212,16 +212,17 @@ small, .text_small {
 .image-box .project-img{
     flex-grow: 1;
     max-height: 20vh;
-    transition: transform 600ms ease-in-out;
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .image-box .project-img:nth-child(2n){
     margin-left: 1rem;
 }
-.image-box .project-img:hover{
+.image-box .project-img img{
+    transition: transform 600ms ease-in-out;
+}
+.overlay-text:hover ~ img{
     transform: scale(1.1,1.1);
-    z-index: 1051;
     cursor: pointer;
 }
 .lightbox{
@@ -231,17 +232,16 @@ small, .text_small {
     max-width: 100%;
 }
 .lightbox .modal-dialog {
-    margin-top: 25vh;
     max-width: 95vw;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .lightbox .modal-dialog {
         max-width: 60vw;
     }
 }
 
 .lightbox .modal-header{
-    padding: 0;
+    padding: 0 1rem 0 0;
 }
 .modal-page{
     width: 100vw;
@@ -786,7 +786,6 @@ div.about > p > span {
 
 .overlay-text{
     position: absolute;
-    height: 100%;
     z-index: 1053;
     top: 0;
     width: 100%;
@@ -795,6 +794,7 @@ div.about > p > span {
     flex-direction: column;
     justify-content: center;
     opacity: 0;
+    height: 100%;
     transition: opacity 500ms ease-in-out;
 }
 .overlay-text:hover{

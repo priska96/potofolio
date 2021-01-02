@@ -77,7 +77,7 @@ const data = {
                 cardTitle: "PSCORE EDU",
                 cardText: "The education page from PSCORE is a WordPress website to provide tutoring classes for " +
                     "North Korean defectors. Students and tutors register on the page and are matched. I mostly update " +
-                    "the 'Successful Tutoring Experiences' section as well as added a PHP script to add the registration" +
+                    "the 'Successful Tutoring Experiences' section. Besides, I added a PHP script to add the registration" +
                     "date to the database and make it visible in the WordPress admin overview.",
                 buttonCode: 'https://github.com/priska96/pscore/blob/master/member_registration_date.php'
             },
@@ -203,8 +203,8 @@ class ProjectDetail extends React.Component {
                             <div className="image-box">
                                 {data[this.card].imgs.map((s, i) =>
                                     <div className="project-img" onClick={() => this.viewLightbox(s)}>
-                                        <Image src={s} key={i}/>
                                         <div className="overlay-text"><span>Click to enlarge</span></div>
+                                        <Image src={s} key={i}/>
                                     </div>
                                 )}
                             </div>
