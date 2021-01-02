@@ -94,16 +94,25 @@ class Project extends React.Component {
         super(props);
         this.cardsGroup = props.cardsGroup;
         this.cards = props.cards;
-        this.viewDetail = this.viewDetail.bind(this);
         this.state = {
-            show: false
+            show: false,
+            cardName: ''
         }
+        this.handleClose = this.handleClose.bind(this);
+        this.viewDetail = this.viewDetail.bind(this);
+        this.renderDetail = this.renderDetail.bind(this);
     }
-
+    handleClose() {
+        this.setState({show: false});
+    }
     viewDetail(cardName){
-        this.setState({show: true})
+        this.setState({show: true, cardName: cardName})
         // let show = true;
         // return new ProjectDetail({show:show, card:cardName})
+    }
+    renderDetail(){
+        if(this.state.cardName === ''){ return null}
+        return(<ProjectDetail show={this.state.show} card={this.state.cardName} closeAction={this.handleClose}/>)
     }
     render() {
         let controls = false;
@@ -112,7 +121,6 @@ class Project extends React.Component {
             controls = true;
             indicators = true;
         }
-        let show = this.state.show;
         return (
 
             <React.Fragment>
@@ -135,7 +143,7 @@ class Project extends React.Component {
                                             <Button variant="loading"
                                                     href={card.buttonCode} target="_blank">View Code</Button> : null}
                                             <Button variant="loading"
-                                                    onClick={this.viewDetail}>View Details</Button>
+                                                    onClick={()=>this.viewDetail(card.name)}>View Details</Button>
                                     </ButtonGroup>
                                 </Card.Body>
                             </div>
@@ -157,11 +165,12 @@ class Project extends React.Component {
                                         <Button variant="loading"
                                                 href={card.buttonCode} target="_blank">View Code</Button> : null}
                                         <Button variant="loading"
-                                                onClick={this.viewDetail}>View Details</Button>
+                                                onClick={()=>this.viewDetail(card.name)}>View Details</Button>
                                 </ButtonGroup>
                             </Card.Body>
                         </div>
-                        <ProjectDetail show={show} card={card.name}/>
+
+                        {/*<ProjectDetail show={show} card={card.name}/>*/}
                         {/*<Modal show={show}>*/}
                         {/*    <Modal.Header closeButton>*/}
                         {/*      <Modal.Title>{dataDetail['nutritionplanner'].cardTitle}</Modal.Title>*/}
@@ -176,6 +185,7 @@ class Project extends React.Component {
                     </Carousel.Item>)
                     )}
                 </Carousel>
+                {this.renderDetail()}
             </React.Fragment>
         )
     }

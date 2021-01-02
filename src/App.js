@@ -25,8 +25,6 @@ function App() {
     });*/
     return (
             <div className="App">
-
-
                 <div className="navigation">
                     <div className="navigation-sub">
                         <Navbar bg="light" expand="md" fixed="top" className="bg-light justify-content-end pr-0">

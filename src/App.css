@@ -243,6 +243,9 @@ small, .text_small {
 .lightbox .modal-header{
     padding: 0 1rem 0 0;
 }
+.ReactModal__Overlay.ReactModal__Overlay--after-open{
+    z-index: 1100!important;
+}
 .modal-page{
     width: 100vw;
     min-height: 100vh;
@@ -901,3 +904,4 @@ div.about > p > span {
 }
 
 /*footer end*/
+
