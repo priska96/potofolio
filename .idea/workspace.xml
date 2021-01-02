@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e671cd0-848d-4001-935c-eeb1b2ab0790" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AboutMe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjectDetail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +94,7 @@
       <workItem from="1609279341498" duration="22268000" />
       <workItem from="1609397431055" duration="27800000" />
       <workItem from="1609512279403" duration="38052000" />
-      <workItem from="1609583295789" duration="7071000" />
+      <workItem from="1609583295789" duration="7675000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1608551568345</created>
@@ -211,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609573676809</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refining detailpages">
+      <created>1609590497968</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609590497968</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
