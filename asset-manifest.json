@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2c2efecc.chunk.css",
-    "main.js": "/portfolio/static/js/main.d39aa94a.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.d39aa94a.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.8c6a86dc.chunk.css",
+    "main.js": "/portfolio/static/js/main.1374eaf8.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.1374eaf8.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.e1b9e4f0.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.e1b9e4f0.js.map",
     "static/css/2.ab18fb39.chunk.css": "/portfolio/static/css/2.ab18fb39.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.f0bea583.chunk.js.map": "/portfolio/static/js/3.f0bea583.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.ab18fb39.chunk.css.map": "/portfolio/static/css/2.ab18fb39.chunk.css.map",
-    "static/css/main.2c2efecc.chunk.css.map": "/portfolio/static/css/main.2c2efecc.chunk.css.map",
+    "static/css/main.8c6a86dc.chunk.css.map": "/portfolio/static/css/main.8c6a86dc.chunk.css.map",
     "static/js/2.2fe9a6a9.chunk.js.LICENSE.txt": "/portfolio/static/js/2.2fe9a6a9.chunk.js.LICENSE.txt",
     "static/media/B1F8E852-FC49-4C36-9C10-3E0C75671B29.6e60aa7d.JPEG": "/portfolio/static/media/B1F8E852-FC49-4C36-9C10-3E0C75671B29.6e60aa7d.JPEG",
     "static/media/IMG_63873.fd96e0b3.png": "/portfolio/static/media/IMG_63873.fd96e0b3.png",
@@ -20,8 +20,10 @@
     "static/media/css3.5095e12b.svg": "/portfolio/static/media/css3.5095e12b.svg",
     "static/media/django-community.17054aee.svg": "/portfolio/static/media/django-community.17054aee.svg",
     "static/media/explain.33a1e896.mp4": "/portfolio/static/media/explain.33a1e896.mp4",
+    "static/media/glowingkids.6aae77ef.png": "/portfolio/static/media/glowingkids.6aae77ef.png",
     "static/media/glowingkids_small.701dad9e.png": "/portfolio/static/media/glowingkids_small.701dad9e.png",
     "static/media/html-5.821ba738.svg": "/portfolio/static/media/html-5.821ba738.svg",
+    "static/media/jabe.c2bbde83.png": "/portfolio/static/media/jabe.c2bbde83.png",
     "static/media/jabe_small.14da6f3d.png": "/portfolio/static/media/jabe_small.14da6f3d.png",
     "static/media/javascript-4.13ceb963.svg": "/portfolio/static/media/javascript-4.13ceb963.svg",
     "static/media/jquery.065f616e.svg": "/portfolio/static/media/jquery.065f616e.svg",
@@ -29,6 +31,7 @@
     "static/media/logo.6ce24c58.svg": "/portfolio/static/media/logo.6ce24c58.svg",
     "static/media/logo.85a8dc3f.png": "/portfolio/static/media/logo.85a8dc3f.png",
     "static/media/me.b51d21f8.png": "/portfolio/static/media/me.b51d21f8.png",
+    "static/media/munscr.17fd36e7.png": "/portfolio/static/media/munscr.17fd36e7.png",
     "static/media/munscr_small.f5c161f7.png": "/portfolio/static/media/munscr_small.f5c161f7.png",
     "static/media/nutritionplanner_small.61e04493.png": "/portfolio/static/media/nutritionplanner_small.61e04493.png",
     "static/media/poilei_cookies.f4c1b98b.png": "/portfolio/static/media/poilei_cookies.f4c1b98b.png",
@@ -38,6 +41,7 @@
     "static/media/pscore_seminar.486f4c13.png": "/portfolio/static/media/pscore_seminar.486f4c13.png",
     "static/media/pscore_small.8b599e66.png": "/portfolio/static/media/pscore_small.8b599e66.png",
     "static/media/pscore_workshop.6fc733af.png": "/portfolio/static/media/pscore_workshop.6fc733af.png",
+    "static/media/pscoreedu.219059c9.png": "/portfolio/static/media/pscoreedu.219059c9.png",
     "static/media/pscoreedu_1.542f45de.png": "/portfolio/static/media/pscoreedu_1.542f45de.png",
     "static/media/pscoreedu_2.62932cb2.png": "/portfolio/static/media/pscoreedu_2.62932cb2.png",
     "static/media/pscoreedu_register.b715ecbf.png": "/portfolio/static/media/pscoreedu_register.b715ecbf.png",
@@ -54,7 +58,7 @@
     "static/js/runtime-main.e1b9e4f0.js",
     "static/css/2.ab18fb39.chunk.css",
     "static/js/2.2fe9a6a9.chunk.js",
-    "static/css/main.2c2efecc.chunk.css",
-    "static/js/main.d39aa94a.chunk.js"
+    "static/css/main.8c6a86dc.chunk.css",
+    "static/js/main.1374eaf8.chunk.js"
   ]
 }
