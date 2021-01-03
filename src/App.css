@@ -606,6 +606,11 @@ div.about > p > span {
     opacity: 1;
 }
 
+.rollin {
+    opacity: 0;
+    -webkit-transform: translate3d(-101vw, 0, 0) rotate(-120deg);
+    transform: translate3d(-101vw, 0, 0) rotate(-120deg);
+}
 @media screen and (min-width: 314px) {
 
     .skills {

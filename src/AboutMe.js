@@ -25,7 +25,7 @@ var observer = new IntersectionObserver(function(entries) {
 		if(entries[0]['intersectionRatio'] > 0.6) {
             let skills = document.getElementsByClassName('skills')
             Array.from(skills).forEach((skill) => {
-               skill.classList.add('animate__zoomInUp');
+               skill.classList.add('animate__rollIn');
                skill.classList.add('animated');
             })
         }
