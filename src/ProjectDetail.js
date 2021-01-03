@@ -125,6 +125,9 @@ class LightboxWrapper extends React.Component {
 
     render() {
         const {srcIndex, isOpen} = this.state;
+        if(!('imgs' in data[this.card])){
+            return false;
+        }
         const images = data[this.card].imgs;
         let next;
         let prev;
@@ -227,9 +230,10 @@ class ProjectDetail extends React.Component {
                         <h1>{data[this.state.card].cardTitle}</h1>
                         <Container
                             className="d-flex flex-lg-row flex-column flex-wrap justify-content-lg-start align-items-lg-center justify-content-center align-items-start aboutme">
-                            {'vid' in data[this.state.card] ? <video className="project-video" controls>
-                                    <source src={data[this.state.card].vid} type="video/mp4"/>
-                                    Your browser does not support the video tag.</video> :
+                            {'vid' in data[this.state.card] ?
+                                <video className="project-video" controls>
+                                    <source src={data[this.state.card].vid} type="video/mp4"/>Your browser does not support the video tag.
+                                </video> :
                                 <div className="image-box">
                                     {data[this.state.card].imgs.map((s, i) =>
                                         <div className="project-img" onClick={() => this.viewLightbox(i)}>
@@ -258,19 +262,6 @@ class ProjectDetail extends React.Component {
                     </Jumbotron>
                     <LightboxWrapper isOpen={this.state.showLightBox} srcIndex={this.state.srcIndex}
                                      card={this.state.card} closeAction={this.handleClose}/>
-
-                    {/*<Modal.Header closeButton>*/}
-                    {/*  <Card.Title>{data[this.card].cardTitle}</Card.Title>*/}
-                    {/*</Modal.Header>*/}
-                    {/*<Card.Img variant="top" src={data[this.card].img}/>*/}
-                    {/*<Card.Body>*/}
-                    {/*    <Card.Text>{data[this.card].cardText}</Card.Text>*/}
-                    {/*</Card.Body>*/}
-                    {/*<Modal.Footer>*/}
-                    {/*  <Button variant="secondary" onClick={this.handleClose}>*/}
-                    {/*    Close*/}
-                    {/*  </Button>*/}
-                    {/*</Modal.Footer>*/}
                 </Modal>
             </React.Fragment>
         )
