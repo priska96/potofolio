@@ -61,7 +61,7 @@ const data = {
             "adjust layouts of the pages. Besides I wrote a Python script to update the product database " +
             "entries in terms of SEO matters.",
         buttonWebsite: 'https://glowingkids.de',
-        buttonCode: ''
+        buttonCode: 'https://github.com/priska96/glowingkids/blob/master/main.py'
     },
     pscore: {
         imgs: [pscore_abuse, pscore_digital, pscore_workshop, pscore_seminar],
