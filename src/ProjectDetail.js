@@ -87,7 +87,7 @@ const data = {
         cardTitle: "MUNSCR",
         cardText: "MUNSCR stands for Model United Nations for Succesful Corean Reunification. It is the newest " +
             "project between PSCORE and me. It is a WordPress website that I designed and developed from scratch. " +
-            "The design was iteratively created and underwent some changes. The website is under development " +
+            "The design was iteratively created and went through some changes. The website is under development " +
             "and is set to be finished around end of January.",
         buttonWebsite: 'http://munscr.com',
         buttonCode: ''
