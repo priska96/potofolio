@@ -1,11 +1,11 @@
 import logo from './images/logo.png';
 import './App.css';
-import React, {useEffect} from 'react'
+import React from 'react'
 import {Nav, Navbar} from 'react-bootstrap';
 import Home from './Home.js'
-import Projects from './Projects.js'
-import AboutMe from './AboutMe.js'
-import Contact from './Contact.js'
+import Projects from './pages/projects/Projects.js'
+import AboutMe from './pages/about-me/AboutMe.js'
+import Contact from './pages/contact/Contact.js'
 
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
                     </div>
                     {/*Copyright*/}
                     <div className="text-center p-3 bg-light">
-                        © 2020 Copyright: <span className="text-dark">Priska Kohnen</span>
+                        © 2023 Copyright: <span className="text-dark">Priska Kohnen</span>
                     </div>
                 </footer>
             </div>

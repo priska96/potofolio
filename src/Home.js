@@ -1,10 +1,10 @@
 import './App.css';
-import React, {useState, useEffect} from 'react'
-import {Button, Container, Jumbotron} from 'react-bootstrap';
+import React, {useEffect} from 'react'
+import {Container} from 'react-bootstrap';
 
 
 
-var TxtType = function(el, toRotate, period) {
+let TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.txtBatchToggle = false;
         this.txtBatch = 0
@@ -17,7 +17,7 @@ var TxtType = function(el, toRotate, period) {
     };
 
     TxtType.prototype.tick = function() {
-        var fullTxt = this.toRotate[this.txtBatch].join(`<br/>`);
+        let fullTxt = this.toRotate[this.txtBatch].join(`<br/>`);
         if (this.isDeleting) {
             this.txt = '';
         }
@@ -32,8 +32,8 @@ var TxtType = function(el, toRotate, period) {
 
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+        let that = this;
+        let delta = 200 - Math.random() * 100;
 
         if (this.isDeleting) { delta /= 2; }
 
@@ -62,18 +62,18 @@ function Home() {
      // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {    // Update the document title using the browser API
         window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('datatype');
+        let elements = document.getElementsByClassName('typewrite');
+        for (let i=0; i<elements.length; i++) {
+            let toRotate = elements[i].getAttribute('datatype');
             toRotate = JSON.parse(toRotate)
             toRotate[0].push('<span><span style="color:lawngreen;">priska</span>:<span style="color:mediumslateblue;">~</span>$ clear')
-            var period = elements[i].getAttribute('data-period');
+            let period = elements[i].getAttribute('data-period');
             if (toRotate) {
               new TxtType(elements[i], toRotate, period);
             }
         }
         // INJECT CSS
-        var css = document.createElement("style");
+        let css = document.createElement("style");
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
@@ -103,31 +103,31 @@ export default Home;
 
 
     // set up text to print, each item in array is new line
-var aText = ["node hello.js",
+let aText = ["node hello.js",
 "Hello, World!", "I am Priska Kohnen.", "A full-stack Web Developer."];
-var iSpeed = 100; // time delay of print out
-var iIndex = 0; // start printing array at this posision
-var iArrLength = aText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
+let iSpeed = 100; // time delay of print out
+let iIndex = 0; // start printing array at this posision
+let iArrLength = aText[0].length; // the length of the text array
+let iScrollAt = 20; // start scrolling up at this many lines
 
-var iTextPos = 0; // initialise text position
-var sContents = ''; // initialise contents variable
-var iRow; // initialise current row
+let iTextPos = 0; // initialise text position
+let sContents = ''; // initialise contents variable
+let iRow; // initialise current row
 
 function typewriter()
 {
  sContents =  ' ';
  iRow = Math.max(0, iIndex-iScrollAt);
- var destination = document.getElementById("typedtext");
+ let destination = document.getElementById("typedtext");
 
  while ( iRow < iIndex ) {
   sContents += aText[iRow++] + '<br />';
  }
  destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
- if ( iTextPos++ == iArrLength ) {
+ if ( iTextPos++ === iArrLength ) {
   iTextPos = 0;
   iIndex++;
-  if ( iIndex != aText.length ) {
+  if ( iIndex !== aText.length ) {
    iArrLength = aText[iIndex].length;
    setTimeout(typewriter, 500);
   }
