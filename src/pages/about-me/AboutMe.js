@@ -2,13 +2,14 @@ import react from '../../images/logo.svg';
 import reactNative from '../../images/react-native.svg';
 import html from '../../images/html-5.svg';
 import css from '../../images/css3.svg';
-import sass from '../../images/sass-1.svg';
 import javascript from '../../images/javascript-4.svg';
 import jquery from '../../images/jquery.svg';
 import bootstrap from '../../images/bootstrap-4.svg';
 import python from '../../images/python-3.svg';
 import django from '../../images/django-community.svg';
 import wordpress from '../../images/wordpress-icon.svg';
+import ros from '../../images/ros_logo.svg';
+import webpack from '../../images/webpack_logo.png';
 
 import me3 from '../../images/me.png';
 import '../../App.css';
@@ -67,7 +68,7 @@ function AboutMe() {
                             <br/>
                             I currently live in Seoul, South Korea, and work here as a Software Engineer for ThorDrive,
                             a company that develops technologies for autonomous cars.
-                            By ending this part of my career and moving back to Berlin, I can't wait to learn new
+                            Closing this chapter of my career and moving back to Berlin, I can't wait to learn new
                             technologies and concepts and see, where they take me to.
                         </p>
                     </div>
@@ -80,16 +81,17 @@ function AboutMe() {
                         <Image src={html} className="skills animate__animated"/>
                         <Image src={css} className="skills animate__animated"/>
                         <Image src={javascript} className="skills animate__animated"/>
-                        <Image src={python} className="skills animate__animated"/>
+                        <Image src={jquery} className="skills animate__animated"/>
+                        <Image src={bootstrap} className="skills animate__animated"/>
                     </Row>
                     <Row className="px-3">
-                        <Image src={sass} className="skills animate__animated"/>
-                        <Image src={bootstrap} className="skills animate__animated"/>
-                        <Image src={jquery} className="skills animate__animated"/>
-                    </Row>
-                    <Row className="p-3">
                         <Image src={react} className="skills animate__animated"/>
                         <Image src={reactNative} className="skills animate__animated"/>
+                        <Image src={webpack} className="skills animate__animated"/>
+                        <Image src={ros} className="skills animate__animated"/>
+                    </Row>
+                    <Row className="p-3">
+                        <Image src={python} className="skills animate__animated"/>
                         <Image src={django} className="skills animate__animated"/>
                         <Image src={wordpress} className="skills animate__animated"/>
                     </Row>

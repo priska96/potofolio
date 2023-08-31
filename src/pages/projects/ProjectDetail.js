@@ -49,7 +49,8 @@ export default function  ProjectDetail(props){
                     <h1>{data[card].cardTitle}</h1>
                     <Container
                         className="d-flex flex-lg-row flex-column flex-wrap justify-content-lg-start align-items-lg-center justify-content-center align-items-start aboutme">
-                        {'vids' in data[card] ?
+                        <div className="project-media">
+                            {'vids' in data[card] ?
                                 <div className="video-box" >
                                     {data[card].vids.map((src, idx) =>
                                         <div key={idx} className="project-video">
@@ -60,17 +61,20 @@ export default function  ProjectDetail(props){
                                         </div>
                                     )}
                                 </div>
-                            :
-                            <div className="image-box">
-                                {data[card].imgs.map((src, idx) =>
-                                    <div key={idx} className="project-img" onClick={() => viewLightbox(idx)}>
-                                        <div className="overlay-text"><span>Click to enlarge</span></div>
-                                        <Image src={src} key={idx}/>
-                                    </div>
-                                )}
-                            </div>
-                        }
-
+                            : ''
+                            }
+                            {'imgs' in data[card] ?
+                                <div className="image-box">
+                                    {data[card].imgs.map((src, idx) =>
+                                        <div key={idx} className="project-img" onClick={() => viewLightbox(idx)}>
+                                            <div className="overlay-text"><span>Click to enlarge</span></div>
+                                            <Image src={src} key={idx}/>
+                                        </div>
+                                    )}
+                                </div>
+                                : ''
+                            }
+                        </div>
                         <div className="project-desc">
                             <p>{parse(data[card].cardText)}</p>
                         </div>

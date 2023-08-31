@@ -20,6 +20,9 @@ import webUpdater from '../../images/webUpdater.mp4';
 import webBagPlayerPoster from '../../images/webBagPlayer_poster.png';
 import webBagRecorderPoster from '../../images/webBagRecorder_poster.png';
 import webUpdaterPoster from '../../images/webUpdater_poster.png';
+import fmsDashboard from '../../images/fms_dashboard.mp4';
+import fmsAdminZones from '../../images/fms_admin_zones.png';
+import fmsAdminNotify from '../../images/fms_admin_notify.png';
 
 
 export const data = {
@@ -116,26 +119,33 @@ export const data = {
         vidTitle: ["rosbag record", "rosbag play", "Version Manager"],
         cardTitle: "ThorDrive WebViz",
         cardText: "A GUI for self-driving cars to check their status and simplify testing procedures. " +
-            "This web application uses the opensource code from the cruise-automation webViz git. I added features to " +
+            "This web application uses the opensource code from the cruise-automation webviz git. I added features to " +
             "provide a GUI for the ROS commands " +
             "<a href='http://wiki.ros.org/rosbag/Commandline#rosbag_record' target='_blank'>'rosbag record'</a> " +
             "and <a href='http://wiki.ros.org/rosbag/Commandline#rosbag_play' target='_blank'>'rosbag play'</a>. " +
-            "Furthermore, I added a functionality to update/downgrade our code bases as well as an HMI to send commands" +
-            " to the self-driving car. This web application uses Python and C++ in the back-end and React in the " +
+            "Furthermore, I implemented a functionality to update/downgrade our code bases as well as an HMI to send commands" +
+            " to the self-driving vehilce. This web application uses Python and C++ in the back-end and React in the " +
             "front-end. The communication with the vehicles is established via ros messages that can be sent and " +
             "received via the webViz. Compared to the original webViz from cruise-automation that only plays ros " +
             "bag files, ThorDrive's webViz connects to a rosbridge server to allow more interactions with the vehicles.",
         buttonCode: 'https://github.com/cruise-automation/webviz',
     },
     FMS: {
-        imgs: [twotickets_redesign, twotickets_filter, twotickets_vattenfall_4],
-        cardTitle: "TwoTickets.de",
-        cardText: "TwoTickets.de sells memberships to its users. Registered members can win a pair of tickets for any " +
-            "event, whose organizer collaborates with TwoTickets.de. I maintain the back- and the front-end in terms " +
-            "of bug fixing and adding new features. My main projects were a redesign of landing and event pages, " +
-            "optimizing the filter and search functions, a redesign of the iFrame version for an affiliate " +
-            "company (Vattenfall) and a current tech-stack update project. " +
-            "This website is build with Django in the back-end and Sass and jQuery in the front-end." ,
-        buttonAffiliate: 'https://vattenfall.de/freikarten',
+        imgs: [fmsAdminZones, fmsAdminNotify],
+        vids: [fmsDashboard],
+        poster: [],
+        vidTitle: ["Dashboard - Monitoring view",],
+        cardTitle: "Fleet Management System",
+        cardText: "ThorDrive's Fleet Management System (FMS) is a monitoring and work order management system for " +
+            "the ground handling at the airport. To take care of the tug vehicles, that are equipped with ThorDrive's " +
+            "self-driving car technologies this project was started and is still under development. It keeps track of " +
+            "all tugs, their health conditions', their locations', their assigned work orders' as well as flight " +
+            "schedules and the overall work orders. In the administrative part the admins can add tug vehicles to the " +
+            "system and customize it to their needs. Those customizations include creating workspaces and zones within " +
+            "these spaces to centralize the map and display important areas. Furthermore, admins can set conditions on " +
+            "which push notifications are being sent out. This web application uses Java Spring in the back-end and " +
+            "React Typescript in the front-end. The map and map events play an important role which I implemented " +
+            "using leaflet and react-leaflet." ,
+        buttonCode: '',
     }
 };
