@@ -23,6 +23,11 @@ import webUpdaterPoster from '../../images/webUpdater_poster.png';
 import fmsDashboard from '../../images/fms_dashboard.mp4';
 import fmsAdminZones from '../../images/fms_admin_zones.png';
 import fmsAdminNotify from '../../images/fms_admin_notify.png';
+import fmsMobileWO from '../../images/mobile_WO.png';
+import fmsMobileWODetail from '../../images/mobile_WO_detail.png';
+import fmsMobileGSE from '../../images/mobile_GSE.png';
+import fmsMobileFS from '../../images/mobile_FS.png';
+import fmsMobileWOStart from '../../images/mobile_startWO.png';
 
 
 export const data = {
@@ -131,7 +136,7 @@ export const data = {
         buttonCode: 'https://github.com/cruise-automation/webviz',
     },
     FMS: {
-        imgs: [fmsAdminZones, fmsAdminNotify],
+        imgs: [fmsAdminZones, fmsAdminNotify, fmsMobileWO, fmsMobileWODetail, fmsMobileWOStart, fmsMobileFS, fmsMobileGSE],
         vids: [fmsDashboard],
         poster: [],
         vidTitle: ["Dashboard - Monitoring view",],
@@ -145,7 +150,9 @@ export const data = {
             "these spaces to centralize the map and display important areas. Furthermore, admins can set conditions on " +
             "which push notifications are being sent out. This web application uses Java Spring in the back-end and " +
             "React Typescript in the front-end. The map and map events play an important role which I implemented " +
-            "using leaflet and react-leaflet." ,
+            "using leaflet and react-leaflet. <br/>" +
+            "This web application is complemented by a mobile app using React Native. The purpose of the mobile app is " +
+            "for the ground workers to start and complete work orders." ,
         buttonCode: '',
     }
 };

@@ -135,7 +135,7 @@ const data = {
                     cardText: "A Fleet Management System to monitor and remotely control tug vehicles at the airport.",
                     buttonWebsite: '',
                     buttonCode: ''
-                },
+                }
                 ]
             },
             {
