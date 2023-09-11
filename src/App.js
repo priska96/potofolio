@@ -28,7 +28,7 @@ function App() {
                 <div className="navigation">
                     <div className="navigation-sub">
                         <Navbar bg="light" expand="md" fixed="top" className="bg-light justify-content-end pr-0">
-                            <Navbar.Brand href="/" className="flex-grow-2 text-right">
+                            <Navbar.Brand href="/portfolio" className="flex-grow-2 text-right">
                                 <img
                                     src={logo}
                                     className="d-inline-block align-top logo"

@@ -111,10 +111,10 @@ export const data = {
         imgs: [twotickets_redesign, twotickets_filter, twotickets_vattenfall_4],
         cardTitle: "TwoTickets.de",
         cardText: "TwoTickets.de sells memberships to its users. Registered members can win a pair of tickets for any " +
-            "event, whose organizer collaborates with TwoTickets.de. I maintain the back- and the front-end in terms " +
+            "event, whose organizer collaborates with TwoTickets.de. I maintained the back- and the front-end in terms " +
             "of bug fixing and adding new features. My main projects were a redesign of landing and event pages, " +
             "optimizing the filter and search functions, a redesign of the iFrame version for an affiliate " +
-            "company (Vattenfall) and a current tech-stack update project. " +
+            "company (Vattenfall) and a tech-stack update project. " +
             "This website is build with Django in the back-end and Sass and jQuery in the front-end." ,
         buttonAffiliate: 'https://vattenfall.de/freikarten',
     },

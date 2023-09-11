@@ -145,7 +145,7 @@ const data = {
                     img: twotickets,
                     cardTitle: "TwoTickets.de",
                     cardText: "A Django website, that sells memberships to its users. Members can win " +
-                        "a pair of tickets for various events (maintaining).",
+                        "a pair of tickets for various events.",
                     buttonWebsite: 'https://twotickets.de',
                     buttonCode: ''
                 },]
@@ -172,7 +172,7 @@ const data = {
                         name: "munscr",
                         img: munscr,
                         cardTitle: "MUNSCR",
-                        cardText: "A WordPress website about a Model United Nations about successful Korean reunification (build from scratch).",
+                        cardText: "A WordPress website about a Model United Nations about successful Korean reunification (build from scratch, maintaining).",
                         buttonWebsite: 'http://munscr.com',
                         buttonCode: ''
                     },
@@ -180,7 +180,7 @@ const data = {
                         name: "modelunsf",
                         img: modelunsf,
                         cardTitle: "ModelUNSF",
-                        cardText: "A WordPress website about a Model United Nations Strategic Framework Conference (build from scratch).",
+                        cardText: "A WordPress website about a Model United Nations Strategic Framework Conference (build from scratch, maintaining).",
                         buttonWebsite: 'http://modelunsf.com',
                         buttonCode: ''
                     }]
@@ -218,7 +218,7 @@ const data = {
                         name: "glowingkids",
                         img: glowingkids,
                         cardTitle: "GlowingKids",
-                        cardText: "A Shopify online shop that sells clothes for children (maintaining).",
+                        cardText: "A Shopify online shop that sells clothes for children.",
                         buttonWebsite: 'https://glowingkids.de',
                         buttonCode: ''
                     }]
