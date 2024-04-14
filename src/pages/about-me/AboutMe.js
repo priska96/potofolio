@@ -13,38 +13,20 @@ import webpack from '../../images/webpack_logo.png';
 
 import me3 from '../../images/me.png';
 import '../../App.css';
-import React, {useEffect} from 'react'
-import {Container, Image, Jumbotron, Row} from 'react-bootstrap';
-
-var observer = new IntersectionObserver(function(entries) {
-	// isIntersecting is true when element and viewport are overlapping
-	// isIntersecting is false when element and viewport don't overlap
-	// since there is a single target to be observed, there will be only one entry
-	if(entries[0]['isIntersecting'] === true) {
-		if(entries[0]['intersectionRatio'] > 0.6) {
-            let skills = document.getElementsByClassName('skills')
-            Array.from(skills).forEach((skill) => {
-               skill.classList.add('animate__rollIn');
-               skill.classList.add('animated');
-            })
-        }
-	}
-}, { threshold: [0.6] });
+import React from 'react'
+import {Container, Image, Row} from 'react-bootstrap';
+import { Jumbotron } from '../../components/Jumbotron';
+import { useInView } from 'react-intersection-observer';
 
 
 
-
-
-
-function AboutMe() {
-    useEffect(() => {
-        observer.observe(document.querySelector("#skillset"));
-    })
+const AboutMe = ()=> {
+    const { ref, inView } = useInView({
+        /* Optional options */
+        threshold: 0.6,
+      });
     return (
         <div className="AboutMe">
-            {/*<Container className="d-flex justify-content-center align-items-center aboutme-header">*/}
-            {/*    */}
-            {/*</Container>*/}
             <Jumbotron className="img-container2 bg-beige">
                 <h1>About Me</h1>
                 <Container
@@ -74,26 +56,26 @@ function AboutMe() {
                     </div>
                 </Container>
             </Jumbotron>
-            <Jumbotron id="skillset" className="skill-jumbotron">
+            <Jumbotron ref={ref} id="skillset" className="skill-jumbotron">
                 <h2>Skills</h2>
                 <Container className="skill-container">
                     <Row className="p-3">
-                        <Image src={html} className="skills animate__animated"/>
-                        <Image src={css} className="skills animate__animated"/>
-                        <Image src={javascript} className="skills animate__animated"/>
-                        <Image src={jquery} className="skills animate__animated"/>
-                        <Image src={bootstrap} className="skills animate__animated"/>
+                        <Image src={html} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={css} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={javascript} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={jquery} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={bootstrap} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
                     </Row>
                     <Row className="px-3">
-                        <Image src={react} className="skills animate__animated"/>
-                        <Image src={reactNative} className="skills animate__animated"/>
-                        <Image src={webpack} className="skills animate__animated"/>
-                        <Image src={ros} className="skills animate__animated"/>
+                        <Image src={react} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={reactNative} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={webpack} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={ros} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
                     </Row>
                     <Row className="p-3">
-                        <Image src={python} className="skills animate__animated"/>
-                        <Image src={django} className="skills animate__animated"/>
-                        <Image src={wordpress} className="skills animate__animated"/>
+                        <Image src={python} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={django} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={wordpress} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
                     </Row>
                 </Container>
                 </Jumbotron>

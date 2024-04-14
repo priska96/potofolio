@@ -1,5 +1,6 @@
 import React from 'react'
-import {Button, Modal, Container, Image, Jumbotron, ButtonGroup} from 'react-bootstrap';
+import {Button, Modal, Container, Image, ButtonGroup} from 'react-bootstrap';
+import { Jumbotron } from '../../components/Jumbotron';
 import parse from 'html-react-parser';
 import LightBoxWrapper from "../../components/light-box/LightBoxWrapper";
 import '../../App.css';
@@ -64,6 +65,24 @@ export default function  ProjectDetail(props){
                             : ''
                             }
                             {'imgs' in data[card] ?
+                                // <div className="image-box">
+                                // <Gallery >
+                                //     {data[card].imgs.map((src, idx) => 
+                                //         <Item
+                                //         key={idx} 
+                                //         original={src}
+                                //         thumbnail={src}
+                                //         height={1404}
+                                //         >
+                                //         {({ ref, open }) => (
+                                //             <div className="project-img" onClick={open}>
+                                //                 <div className="overlay-text"><span>Click to enlarge</span></div>
+                                //                 <img ref={ref}  src={src} alt=""/>
+                                //             </div>
+                                //         )}
+                                //         </Item> )}
+                                // </Gallery>
+                                // </div>
                                 <div className="image-box">
                                     {data[card].imgs.map((src, idx) =>
                                         <div key={idx} className="project-img" onClick={() => viewLightbox(idx)}>
@@ -106,12 +125,12 @@ export default function  ProjectDetail(props){
                         }
                     </Container>
                 </Jumbotron>
-                <LightBoxWrapper
+               { showLightBox ? <LightBoxWrapper
                     isOpen={showLightBox}
                     srcIndex={srcIndex}
                     card={data[card]}
                     handleClose={handleClose}
-                />
+                />  : null }
             </Modal>
         </React.Fragment>
     )

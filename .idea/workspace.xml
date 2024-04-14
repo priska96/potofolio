@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e671cd0-848d-4001-935c-eeb1b2ab0790" name="Default Changelist" comment="updating npm packages">
-      <change afterPath="$PROJECT_DIR$/src/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/light-box/LightBoxArrowButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/light-box/LightBoxButtonControl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/light-box/LightBoxWrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/projects/ProjectDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/projects/Projects.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/projects/project-data.js" afterDir="false" />
+    <list default="true" id="2e671cd0-848d-4001-935c-eeb1b2ab0790" name="Default Changelist" comment="fixed typos">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about-me/AboutMe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectDetail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/Projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,23 +47,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/priska/HobbyProjects/portfolio",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/priska/HobbyProjects/portfolio&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages/about-me" />
@@ -142,7 +125,10 @@
       <workItem from="1609583295789" duration="7675000" />
       <workItem from="1609644992652" duration="5424000" />
       <workItem from="1690957641218" duration="5192000" />
-      <workItem from="1692423317475" duration="35898000" />
+      <workItem from="1692423317475" duration="36939000" />
+      <workItem from="1693442707406" duration="13691000" />
+      <workItem from="1694514306601" duration="598000" />
+      <workItem from="1695237054287" duration="1794000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1608551568345</created>
@@ -278,7 +264,39 @@
       <option name="project" value="LOCAL" />
       <updated>1690957787494</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added thordrive webviz. updated npm packages and folder structure">
+      <option name="closed" value="true" />
+      <created>1693370416417</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1693370416417</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added thordrive fms and skills">
+      <option name="closed" value="true" />
+      <created>1693458825879</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1693458825879</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added thordrive fms and skills">
+      <option name="closed" value="true" />
+      <created>1693535116488</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1693535116488</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fixed typos">
+      <option name="closed" value="true" />
+      <created>1694434375933</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1694434375933</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +319,9 @@
     <MESSAGE value="refining" />
     <MESSAGE value="refining detailpages" />
     <MESSAGE value="updating npm packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating npm packages" />
+    <MESSAGE value="added thordrive webviz. updated npm packages and folder structure" />
+    <MESSAGE value="added thordrive fms and skills" />
+    <MESSAGE value="fixed typos" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed typos" />
   </component>
 </project>

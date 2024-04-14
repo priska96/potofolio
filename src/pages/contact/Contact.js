@@ -1,6 +1,8 @@
 import '../../App.css';
 import React from 'react'
-import {Button, Container, Form, Jumbotron} from 'react-bootstrap';
+import {Button, Container, Form, Row} from 'react-bootstrap';
+// import { Container} from 'react-bootstrap';
+import { Jumbotron } from '../../components/Jumbotron';
 
 function Contact() {
     return (
@@ -18,17 +20,17 @@ function Contact() {
                     to <a href="mailto:priskakohnen@gmail.com" className="highlight">priskakohnen@gmail.com</a>
                 </p>
                     <Form className="w-md-75 w-100 mx-auto" action="https://formspree.io/f/xzbkkyjn" method="POST">
-                        <Form.Row className="justify-content-between m-0">
-                            <Form.Group controlId="formEmail">
+                        <Row className="justify-content-between m-0">
+                            <Form.Group controlId="formEmail" style={{width:"48%", marginBottom:"1rem"}} >
                                 <Form.Label>Your Email</Form.Label>
                                 <Form.Control type="email" name="email" required={true} placeholder="Enter email"/>
                             </Form.Group>
-                            <Form.Group controlId="formName">
+                            <Form.Group controlId="formName"  style={{width:"48%", marginBottom:"1rem"}} >
                                 <Form.Label>Your Name</Form.Label>
                                 <Form.Control type="text" name="name" required={true} placeholder="Enter full name"/>
                             </Form.Group>
-                        </Form.Row>
-                         <Form.Group controlId="formMessage">
+                        </Row>
+                         <Form.Group controlId="formMessage"  style={{marginBottom:"1rem"}} >
                             <Form.Label>Your Message</Form.Label>
                             <Form.Control as="textarea" name="message" required={true} rows={3} placeholder="Enter message"/>
                           </Form.Group>

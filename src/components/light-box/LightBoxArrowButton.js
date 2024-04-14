@@ -1,11 +1,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import { animated, useTransition } from '@react-spring/web';
+import { useTransition } from '@react-spring/web';
 import {ButtonControl} from "./LightBoxButtonControl";
 
-const ArrowButton = ({ className, disabled, onClick, position }) => {
+const ArrowButton = ({ className, disabled, onClick, position , buttonStyle}) => {
     const transitions = useTransition(!disabled, {
         enter: { opacity: 1 },
         from: { opacity: 0 },
@@ -15,12 +14,24 @@ const ArrowButton = ({ className, disabled, onClick, position }) => {
     return transitions(
         (props, item) =>
             item && (
-                <StyledAnimatedDiv className={className} style={props}>
-                    <Button onClick={onClick} position={position} type="button">
+                <div className={className} style={{zIndex: 999, ...props}}>
+                    <ButtonControl 
+                    style={{
+                        position:"absolute", 
+                        top: 0, 
+                        bottom: 0, 
+                        left: (position === 'left' ? 0 : 'unset'), 
+                        right: (position === 'right' ? 0 : 'unset'),
+                        ...buttonStyle
+                        }} 
+                    onClick={onClick} 
+                    position={position} 
+                    type="button"
+                    >
                         {position === 'left' && <IoIosArrowBack />}
                         {position === 'right' && <IoIosArrowForward />}
-                    </Button>
-                </StyledAnimatedDiv>
+                    </ButtonControl>
+                </div>
             )
     );
 };
@@ -36,15 +47,3 @@ ArrowButton.defaultProps = {
 };
 
 export default ArrowButton;
-
-const StyledAnimatedDiv = styled(animated.div)`
-    z-index: 999;
-`;
-
-const Button = styled(ButtonControl)`
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: ${({ position }) => (position === 'left' ? 0 : 'unset')};
-    right: ${({ position }) => (position === 'right' ? 0 : 'unset')};
-`;

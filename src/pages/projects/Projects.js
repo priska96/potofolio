@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import {Button, ButtonGroup, Card, CardGroup, Jumbotron, Carousel} from 'react-bootstrap';
+import {Button, ButtonGroup, Card, CardGroup, Carousel} from 'react-bootstrap';
+import { Jumbotron } from '../../components/Jumbotron';
 import ProjectDetail from "./ProjectDetail";
 import '../../App.css';
 import './Projects.css';
@@ -120,7 +121,26 @@ const data = {
     content: {
         body: [
             {
-                cardsGroup: 'ThorDrive ',
+                cardsGroup: 'Teclead Ventures GmbH',
+                cards: [{
+                    name: "theChagos",
+                    img: webVisualizer,
+                    cardTitle: "The Chagos",
+                    cardText: "A SaaS web application to optimize interior construction rerading the ESG standards.",
+                    buttonWebsite: 'https://www.thechagos.com/',
+                    buttonCode: ''
+                },{
+                    name: "lotti",
+                    img: fms,
+                    cardTitle: "Lotti - Die KI für Ü50",
+                    cardText: "A web and mobile AI-powered application, empowering seniors to embrace digital living.",
+                    buttonWebsite: 'https://www.lotti.ai/',
+                    buttonCode: ''
+                }
+                ]
+            },
+            {
+                cardsGroup: 'ThorDrive',
                 cards: [{
                     name: "webVisualizer",
                     img: webVisualizer,
@@ -233,9 +253,6 @@ function Projects() {
         <div className="Projects">
             <Jumbotron className="px-0 bg-transparent">
                 <h1>My Projects</h1>
-                {/*<Container className="d-flex justify-content-center align-items-center aboutme-header">*/}
-                {/*    */}
-                {/*</Container>*/}
                 {data.content.body.map((props, i) =>
                     <Project key={i} cardsGroup={props.cardsGroup} cards={props.cards}/>
                 )}

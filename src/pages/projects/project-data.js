@@ -154,5 +154,45 @@ export const data = {
             "This web application is complemented by a mobile app using React Native. The purpose of the mobile app is " +
             "for the ground workers to start and complete work orders." ,
         buttonCode: '',
+    },
+    theChagos: {
+        imgs: [fmsAdminZones, fmsAdminNotify, fmsMobileWO, fmsMobileWODetail, fmsMobileWOStart, fmsMobileFS, fmsMobileGSE],
+        vids: [fmsDashboard],
+        poster: [],
+        vidTitle: ["Dashboard - Monitoring view",],
+        cardTitle: "Fleet Management System",
+        cardText: "ThorDrive's Fleet Management System (FMS) is a monitoring and work order management system for " +
+            "the ground handling at the airport. To take care of the tug vehicles, that are equipped with ThorDrive's " +
+            "self-driving car technologies this project was started and is still under development. It keeps track of " +
+            "all tugs, their health conditions', their locations', their assigned work orders' as well as flight " +
+            "schedules and the overall work orders. In the administrative part the admins can add tug vehicles to the " +
+            "system and customize it to their needs. Those customizations include creating workspaces and zones within " +
+            "these spaces to centralize the map and display important areas. Furthermore, admins can set conditions on " +
+            "which push notifications are being sent out. This web application uses Java Spring in the back-end and " +
+            "React Typescript in the front-end. The map and map events play an important role which I implemented " +
+            "using leaflet and react-leaflet. <br/>" +
+            "This web application is complemented by a mobile app using React Native. The purpose of the mobile app is " +
+            "for the ground workers to start and complete work orders." ,
+        buttonCode: '',
+    },
+    lotti: {
+        imgs: [fmsAdminZones, fmsAdminNotify, fmsMobileWO, fmsMobileWODetail, fmsMobileWOStart, fmsMobileFS, fmsMobileGSE],
+        vids: [fmsDashboard],
+        poster: [],
+        vidTitle: ["Dashboard - Monitoring view",],
+        cardTitle: "Fleet Management System",
+        cardText: "ThorDrive's Fleet Management System (FMS) is a monitoring and work order management system for " +
+            "the ground handling at the airport. To take care of the tug vehicles, that are equipped with ThorDrive's " +
+            "self-driving car technologies this project was started and is still under development. It keeps track of " +
+            "all tugs, their health conditions', their locations', their assigned work orders' as well as flight " +
+            "schedules and the overall work orders. In the administrative part the admins can add tug vehicles to the " +
+            "system and customize it to their needs. Those customizations include creating workspaces and zones within " +
+            "these spaces to centralize the map and display important areas. Furthermore, admins can set conditions on " +
+            "which push notifications are being sent out. This web application uses Java Spring in the back-end and " +
+            "React Typescript in the front-end. The map and map events play an important role which I implemented " +
+            "using leaflet and react-leaflet. <br/>" +
+            "This web application is complemented by a mobile app using React Native. The purpose of the mobile app is " +
+            "for the ground workers to start and complete work orders." ,
+        buttonCode: '',
     }
 };

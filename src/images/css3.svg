@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlnsDc="http://purl.org/dc/elements/1.1/"
+   xmlnsCc="http://creativecommons.org/ns#"
+   xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlnsSvg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1556.3496"
    height="2180.1475"
    viewBox="0 0 335.29 469.67615"
    version="1.1"
    id="svg44"
-   sodipodi:docname="css3.svg"
-   inkscape:version="1.0.1 (1.0.1+r75)">
+   sodipodiDocname="css3.svg"
+   inkscapeVersion="1.0.1 (1.0.1+r75)">
   <metadata
      id="metadata50">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
+    <rdfRDF>
+      <ccWork
+         rdfAbout="">
+        <dcFormat>image/svg+xml</dcFormat>
+        <dcType
+           rdfResource="http://purl.org/dc/dcmitype/StillImage" />
+        <dcTitle></dcTitle>
+      </ccWork>
+    </rdfRDF>
   </metadata>
   <defs
      id="defs48" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1264"
-     inkscape:window-height="940"
+  <sodipodiNamedview
+     pageColor="#ffffff"
+     borderColor="#666666"
+     borderOpacity="1"
+     objectTolerance="10"
+     gridTolerance="10"
+     guideTolerance="10"
+     inkscapePageOpacity="0"
+     inkscapePageShadow="2"
+     inkscapeWindowWidth="1264"
+     inkscapeWindowHeight="940"
      id="namedview46"
-     showgrid="false"
-     fit-margin-top="0"
-     lock-margins="true"
-     inkscape:zoom="0.1756"
-     inkscape:cx="765.95367"
-     inkscape:cy="946.62984"
-     inkscape:window-x="67"
-     inkscape:window-y="27"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg44"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:document-rotation="0" />
+     showGrid="false"
+     fitMarginTop="0"
+     lockMargins="true"
+     inkscapeZoom="0.1756"
+     inkscapeCx="765.95367"
+     inkscapeCy="946.62984"
+     inkscapeWindowX="67"
+     inkscapeWindowY="27"
+     inkscapeWindowMaximized="0"
+     inkscapeCurrentLayer="svg44"
+     fitMarginLeft="0"
+     fitMarginRight="0"
+     fitMarginBottom="0"
+     inkscapeDocumentRotation="0" />
   <path
      d="m -101.646,-34.45344 h 538.584 v 538.583 h -538.584 z"
      fill="none"
@@ -95,7 +95,7 @@
      d="m 70.031002,245.80456 3.233,40.199 94.256998,-40.301 v -40.5 z"
      fill="url(#a)"
      id="path17"
-     style="fill:url(#a)" />
+     style="fillUrl(#a)" />
   <linearGradient
      id="b"
      gradientUnits="userSpaceOnUse"
@@ -118,7 +118,7 @@
      d="m 271.944,161.71356 -104.422,43.489 v 40.5 l 100.265,-42.868 z"
      fill="url(#b)"
      id="path24"
-     style="fill:url(#b)" />
+     style="fillUrl(#b)" />
   <linearGradient
      id="c"
      gradientUnits="userSpaceOnUse"
@@ -140,7 +140,7 @@
      d="m 70.181002,245.80456 3.234,40.199 144.624998,0.461 -3.235,53.598 -47.59,13.398 -45.748,-11.551 -2.772,-33.268 H 76.187002 l 5.545,64.225 85.944998,25.412 85.479,-24.951 11.09,-127.523 z"
      fill="url(#c)"
      id="path31"
-     style="fill:url(#c)" />
+     style="fillUrl(#c)" />
   <path
      d="M 167.522,245.80456 H 70.032002 l 3.233,40.199 94.256998,0.301 z m 0,107.528 -0.462,0.129 -45.742,-11.551 -2.772,-33.268 H 76.039002 l 5.544,64.225 85.938998,25.412 z"
      opacity="0.05"
@@ -166,7 +166,7 @@
      d="M 61.252002,161.71356 H 271.944 l -4.157,41.122 H 66.334002 Z"
      fill="url(#d)"
      id="path40"
-     style="fill:url(#d)" />
+     style="fillUrl(#d)" />
   <path
      d="M 167.522,161.71356 H 61.252002 l 5.082,41.122 H 167.522 Z"
      opacity="0.05"

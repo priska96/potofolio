@@ -47,15 +47,15 @@ function App() {
                         </Navbar>
                     </div>
                 </div>
-                <a className="anchor" name="home"/>
+                <a className="anchor" name="home" href='#home'>{" "}</a>
                 <Home/>
-                <a className="anchor" name="about"/>
+                <a className="anchor" name="about" href="#about"  >{" "}</a>
                 <AboutMe/>
-                <a className="anchor" name="projects"/>
-                <Projects/>
+                <a className="anchor" name="projects" href="#projects">{" "}</a>
+                 <Projects/> 
                 <div id="project-details"/>
-                <a className="anchor" name="contact"/>
-                <Contact/>
+                <a className="anchor" name="contact" href="#contact">{" "}</a>
+                 <Contact/> 
                 <footer>
                     <div id="go-top">
                         <a className="smoothscroll" title="Back to Top" href="#home">
