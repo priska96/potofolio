@@ -3,7 +3,6 @@ import FsLightbox from "fslightbox-react";
 
 
 export default function LightBoxWrapper(props)  {
-    const {isOpen, srcIndex, card, handleClose} = props;
 
     const [currentImageIndex, setCurrentImageIndex] = React.useState(props.srcIndex ?? 0);
     const [images, setImages] = React.useState([])
@@ -21,14 +20,13 @@ export default function LightBoxWrapper(props)  {
         if(props.card.imgs && props.card.imgs.length > 0) setImages(props.card.imgs);
     },[props.card])
 
-    console.log(isOpen, images, currentImageIndex)
 
     return (
         <FsLightbox
         toggler={toggler}
         sources={images}
         sourceIndex={currentImageIndex}
-        onClose={()=>{setToggler(false);handleClose()}}
+        onClose={()=>{setToggler(false);props.handleClose()}}
     />
     );
 };
