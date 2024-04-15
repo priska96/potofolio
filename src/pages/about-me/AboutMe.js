@@ -48,10 +48,13 @@ const AboutMe = ()=> {
                             which are fun to use, if you want something neat and quick. But building everything from scratch
                             and choosing your programming environment is even better!
                             <br/>
-                            I currently live in Seoul, South Korea, and work here as a Software Engineer for ThorDrive,
-                            a company that develops technologies for autonomous cars.
-                            Closing this chapter of my career and moving back to Berlin, I can't wait to learn new
-                            technologies and concepts and see, where they take me to.
+                            Living and working in Seoul, South Korea, as a Software Engineer for ThorDrive,
+                            a company that develops technologies for autonomous cars, was an amazing opportunity and experience to 
+                            get into ROS (Robot Operating System) and React as well as React Native.
+                            After closing this chapter of my career and moving back to Berlin where I started as as Software Devloper 
+                            and Consultant for Teclead Ventures, I dived deeper into React in combination with NextJS and OpenAI. 
+                            <br/>
+                            I'm thrilled to widen my knowledge even more and get to en expert level later in my career path.
                         </p>
                     </div>
                 </Container>

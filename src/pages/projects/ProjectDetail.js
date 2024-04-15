@@ -65,24 +65,6 @@ export default function  ProjectDetail(props){
                             : ''
                             }
                             {'imgs' in data[card] ?
-                                // <div className="image-box">
-                                // <Gallery >
-                                //     {data[card].imgs.map((src, idx) => 
-                                //         <Item
-                                //         key={idx} 
-                                //         original={src}
-                                //         thumbnail={src}
-                                //         height={1404}
-                                //         >
-                                //         {({ ref, open }) => (
-                                //             <div className="project-img" onClick={open}>
-                                //                 <div className="overlay-text"><span>Click to enlarge</span></div>
-                                //                 <img ref={ref}  src={src} alt=""/>
-                                //             </div>
-                                //         )}
-                                //         </Item> )}
-                                // </Gallery>
-                                // </div>
                                 <div className="image-box">
                                     {data[card].imgs.map((src, idx) =>
                                         <div key={idx} className="project-img" onClick={() => viewLightbox(idx)}>
@@ -92,6 +74,19 @@ export default function  ProjectDetail(props){
                                     )}
                                 </div>
                                 : ''
+                            }
+                             {'mobileVids' in data[card] ?
+                                <div className="video-box mobile" >
+                                    {data[card].mobileVids.map((src, idx) =>
+                                        <div key={idx} className="project-video">
+                                            <div className="overlay-text"><span>{data[card].vidTitle[idx]}</span></div>
+                                            <video poster={data[card].poster[idx]} controls>
+                                                <source src={src} type="video/mp4"/>Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    )}
+                                </div>
+                            : ''
                             }
                         </div>
                         <div className="project-desc">

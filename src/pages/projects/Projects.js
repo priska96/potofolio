@@ -16,6 +16,8 @@ import modelunsf from '../../images/modelunsf_small.png';
 import twotickets from '../../images/twotickets_small.png';
 import webVisualizer from '../../images/webVisualizer_small2.png';
 import fms from '../../images/fms_small.png';
+import chagos from '../../images/chagos_smal.png'
+import lotti from '../../images/lotti_small.png'
 
 
 class Project extends React.Component {
@@ -124,14 +126,14 @@ const data = {
                 cardsGroup: 'Teclead Ventures GmbH',
                 cards: [{
                     name: "theChagos",
-                    img: webVisualizer,
+                    img: chagos,
                     cardTitle: "The Chagos",
-                    cardText: "A SaaS web application to optimize interior construction rerading the ESG standards.",
+                    cardText: "A SaaS web application to optimize interior construction regarding the ESG standards.",
                     buttonWebsite: 'https://www.thechagos.com/',
                     buttonCode: ''
                 },{
                     name: "lotti",
-                    img: fms,
+                    img: lotti,
                     cardTitle: "Lotti - Die KI für Ü50",
                     cardText: "A web and mobile AI-powered application, empowering seniors to embrace digital living.",
                     buttonWebsite: 'https://www.lotti.ai/',

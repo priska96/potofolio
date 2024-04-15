@@ -204,6 +204,7 @@
     column-gap: 0;
     margin-right: 0!important;
 }
+
 .project-video{
     padding: 0 15px;
 }
@@ -223,6 +224,14 @@
 .video-box .project-video video{
     width: 100%;
 }
+
+.video-box.mobile{
+    height: 300px;
+}
+.video-box.mobile .project-video, .video-box.mobile .project-video video{
+    height: 100%;
+}
+
 @media screen and (min-width: 992px){
     .image-box, .video-box{
         margin-right: 1rem;

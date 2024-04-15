@@ -28,6 +28,14 @@ import fmsMobileWODetail from '../../images/mobile_WO_detail.png';
 import fmsMobileGSE from '../../images/mobile_GSE.png';
 import fmsMobileFS from '../../images/mobile_FS.png';
 import fmsMobileWOStart from '../../images/mobile_startWO.png';
+import mobileLottiChat from '../../images/mobile_lotti_chat.png';
+import mobileLottiChat2 from '../../images/mobile_lotti_chat2.png';
+import mobileLottiAllChats from '../../images/mobile_lotti_allChats.png';
+import lottiExplore from '../../images/lotti_explore.png';
+import mobileLottiSTT from '../../images/mobile_lotti_stt.mp4';
+import chagos1 from '../../images/chagos1.png';
+import chagos2 from '../../images/chagos2.png';
+import chagos3 from '../../images/chagos3.png';
 
 
 export const data = {
@@ -156,43 +164,33 @@ export const data = {
         buttonCode: '',
     },
     theChagos: {
-        imgs: [fmsAdminZones, fmsAdminNotify, fmsMobileWO, fmsMobileWODetail, fmsMobileWOStart, fmsMobileFS, fmsMobileGSE],
-        vids: [fmsDashboard],
-        poster: [],
-        vidTitle: ["Dashboard - Monitoring view",],
-        cardTitle: "Fleet Management System",
-        cardText: "ThorDrive's Fleet Management System (FMS) is a monitoring and work order management system for " +
-            "the ground handling at the airport. To take care of the tug vehicles, that are equipped with ThorDrive's " +
-            "self-driving car technologies this project was started and is still under development. It keeps track of " +
-            "all tugs, their health conditions', their locations', their assigned work orders' as well as flight " +
-            "schedules and the overall work orders. In the administrative part the admins can add tug vehicles to the " +
-            "system and customize it to their needs. Those customizations include creating workspaces and zones within " +
-            "these spaces to centralize the map and display important areas. Furthermore, admins can set conditions on " +
-            "which push notifications are being sent out. This web application uses Java Spring in the back-end and " +
-            "React Typescript in the front-end. The map and map events play an important role which I implemented " +
-            "using leaflet and react-leaflet. <br/>" +
-            "This web application is complemented by a mobile app using React Native. The purpose of the mobile app is " +
-            "for the ground workers to start and complete work orders." ,
+        imgs: [chagos2,chagos3,chagos1],
+        cardTitle: "The Chagios",
+        cardText: "The Chagos is a SaaS web application to optimize interior construction regarding the ESG standards. " + 
+        "Users can create projects by filling out forms giving information about the size and tzpe of construction and " +
+        "later on can select what kind of flooring, sanitaizing equipment they want to install. Based on that information " +
+        "an analysis and actionplan is created to show the user with which alternative products the project can reduce CO2 or Costs. <br/>"+
+        "For this project I build dynamic frontend components and API endpoints using React,TypeScript, Tailwind CSS, tRPC and NextJS. "+
+        "Additionally I implemented an Admin Dashboard to add Products, Producers etc. to the prisma database whereas the form input was validated using zod." ,
         buttonCode: '',
     },
     lotti: {
-        imgs: [fmsAdminZones, fmsAdminNotify, fmsMobileWO, fmsMobileWODetail, fmsMobileWOStart, fmsMobileFS, fmsMobileGSE],
-        vids: [fmsDashboard],
+        imgs: [mobileLottiChat, mobileLottiChat2,mobileLottiAllChats, lottiExplore],
+        mobileVids: [mobileLottiSTT],
         poster: [],
-        vidTitle: ["Dashboard - Monitoring view",],
-        cardTitle: "Fleet Management System",
-        cardText: "ThorDrive's Fleet Management System (FMS) is a monitoring and work order management system for " +
-            "the ground handling at the airport. To take care of the tug vehicles, that are equipped with ThorDrive's " +
-            "self-driving car technologies this project was started and is still under development. It keeps track of " +
-            "all tugs, their health conditions', their locations', their assigned work orders' as well as flight " +
-            "schedules and the overall work orders. In the administrative part the admins can add tug vehicles to the " +
-            "system and customize it to their needs. Those customizations include creating workspaces and zones within " +
-            "these spaces to centralize the map and display important areas. Furthermore, admins can set conditions on " +
-            "which push notifications are being sent out. This web application uses Java Spring in the back-end and " +
-            "React Typescript in the front-end. The map and map events play an important role which I implemented " +
-            "using leaflet and react-leaflet. <br/>" +
-            "This web application is complemented by a mobile app using React Native. The purpose of the mobile app is " +
-            "for the ground workers to start and complete work orders." ,
+        vidTitle: ["Speech To Text Feature",],
+        cardTitle: "Lotti.ai - Die KI für Ü50",
+        cardText: "Lotti is an AI-powered web and mobile app to empower seniors to embrace digital living. " +
+            "The users can chat with Lotti - your digital expert, helper and friend - and ask anything they " +
+            "want to learn or know about digital topics. The app suggests questions about recent topics to start a " +
+            "conversation and offers follow up questions about this topic so the users can easily get the information " + 
+            "they need. Throughout the whole converstaion Lotti tries to be as friendly and motivating as possible. " + 
+            "Other features include Speach to Text or pre defined " + 
+            "questions about certain topics like Health Care for the user to explore. <br/>" +
+            "For this project I spearheaded the development for the React Native app also featuring push notifications. " +
+            "I refactored and cleaned up most of the legacy codes and worked on the redesign tasks for the whole app. The application is " + 
+            "build with React, TypeScript,Tailwind CSS and NextJS to offer serverless development. By connecting to the OpenAI API and " +
+            "specific prompt engineering Lotti is able communicate like a real person to its users.",
         buttonCode: '',
     }
 };
