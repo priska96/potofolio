@@ -165,7 +165,7 @@ export const data = {
     },
     theChagos: {
         imgs: [chagos2,chagos3,chagos1],
-        cardTitle: "The Chagios",
+        cardTitle: "The Chagos",
         cardText: "The Chagos is a SaaS web application to optimize interior construction regarding the ESG standards. " + 
         "Users can create projects by filling out forms giving information about the size and tzpe of construction and " +
         "later on can select what kind of flooring, sanitaizing equipment they want to install. Based on that information " +

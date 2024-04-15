@@ -10,6 +10,11 @@ import django from '../../images/django-community.svg';
 import wordpress from '../../images/wordpress-icon.svg';
 import ros from '../../images/ros_logo.svg';
 import webpack from '../../images/webpack_logo.png';
+import openai  from '../../images/openai-icon.svg';
+import nextJS  from '../../images/nextJS-icon.svg';
+import tailwind  from '../../images/tailwind-icon.svg';
+import trpc  from '../../images/trpc-icon.svg';
+
 
 import me3 from '../../images/me.png';
 import '../../App.css';
@@ -76,6 +81,12 @@ const AboutMe = ()=> {
                         <Image src={ros} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
                     </Row>
                     <Row className="p-3">
+                        <Image src={openai} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={nextJS} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={trpc} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                        <Image src={tailwind} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
+                    </Row>
+                    <Row className="px-3">
                         <Image src={python} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
                         <Image src={django} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
                         <Image src={wordpress} className={!inView ? "skills animate__animated" : "skills animate__animated animate__rollIn animated" }/>
